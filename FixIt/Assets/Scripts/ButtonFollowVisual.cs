@@ -37,13 +37,13 @@ public class ButtonFollowVisual : MonoBehaviour
             XRPokeInteractor interactor= (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
             freeze = false;
-            if(interactable.name == "english")
+            if(interactable.name == "English")
             {
-                GameManager.Instance.language = "english";
+                GameManager.Instance.language = 1;
             }    
-            else if(interactable.name == "dutch")
+            else if(interactable.name == "Dutch")
             {
-                GameManager.Instance.language = "dutch";
+                GameManager.Instance.language = 2;
             }
 
             pokeAttachTransform = interactor.attachTransform;

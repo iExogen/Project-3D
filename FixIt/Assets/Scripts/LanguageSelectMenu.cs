@@ -15,11 +15,11 @@ public class LanguageSelectMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.Instance.language == "english")
+        if(GameManager.Instance.language == 1)
         {
             text.text = "choose your language";
         }
-        else if (GameManager.Instance.language == "dutch")
+        else if (GameManager.Instance.language == 2)
         {
             text.text = "kies je taal";
         }
