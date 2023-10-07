@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonFollowVisual : MonoBehaviour
@@ -37,13 +38,28 @@ public class ButtonFollowVisual : MonoBehaviour
             XRPokeInteractor interactor= (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
             freeze = false;
-            if(interactable.name == "English")
+            switch(interactable.name)
             {
-                GameManager.Instance.language = 1;
-            }    
-            else if(interactable.name == "Dutch")
-            {
-                GameManager.Instance.language = 2;
+                case "English":
+                    {
+                        GameManager.Instance.language = 1;
+                        break;
+                    }
+                case "Dutch":
+                    {
+                        GameManager.Instance.language = 2;
+                        break;
+                    }
+                case "Start":
+                    {
+                        SceneManager.LoadScene("MainScene");
+                        break;
+                    }
+                    default:
+                    {
+                        break;
+                    }
+
             }
 
             pokeAttachTransform = interactor.attachTransform;
