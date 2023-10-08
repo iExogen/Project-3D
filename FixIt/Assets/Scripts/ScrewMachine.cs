@@ -9,66 +9,51 @@ public class ScrewMachine : MonoBehaviour
 {
     public Transform visualTarget;
     public Vector3 localAxis;
-    public float resetSpeed = 5;
 
-
-    private bool freeze = false;
-
+    public InputActionProperty leftActivate;
+    public InputActionProperty rightActivate;
 
     private Vector3 offset;
-    private Transform pokeAttachTransform;
+    private Transform attachTransform;
 
-    private XRBaseInteractable interactable;
     bool isFollowing = false;
     // Start is called before the first frame update
     void Start()
     {
 
-        interactable = GetComponent<XRBaseInteractable>();
-        interactable.hoverEntered.AddListener(Follow);
-        interactable.hoverExited.AddListener(Reset);
-        interactable.selectEntered.AddListener(Freeze);
     }
 
-    public void Follow(BaseInteractionEventArgs hover)
+    public void OnTriggerEnter(Collider other)
     {
-        if (hover.interactorObject is XRGrabInteractable && hover.interactable.tag == "ScrewDriver")
+        if(other.gameObject.tag == "ScrewDriver")
         {
-            XRSimpleInteractable interactor = (XRSimpleInteractable)hover.interactorObject;
+            attachTransform = other.transform;
+            offset = visualTarget.position - attachTransform.position;
             isFollowing = true;
-            freeze = false;
-
-            pokeAttachTransform = interactor.transform;
-            offset = visualTarget.position - pokeAttachTransform.position;
         }
     }
-
-    public void Reset(BaseInteractionEventArgs hover)
+    public void OnTriggerExit(Collider other)
     {
-        if (hover.interactorObject is XRGrabInteractable && hover.interactable.tag == "ScrewDriver")
+        if (other.gameObject.tag == "ScrewDriver")
         {
             isFollowing = false;
-            freeze = false;
-        }
-    }
+        } 
 
-    public void Freeze(BaseInteractionEventArgs hover)
-    {
-        if (hover.interactorObject is XRGrabInteractable && hover.interactable.tag == "ScrewDriver")
-        {
-            freeze = true;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (freeze)
-            return;
-
-        if (isFollowing)
+        if (isFollowing && leftActivate.action.ReadValue<float>() > 0.1f)
         {
-            Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
+            Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
+            Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
+
+            visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+        }
+        else if(isFollowing && rightActivate.action.ReadValue<float>() > 0.1f)
+        {
+            Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
