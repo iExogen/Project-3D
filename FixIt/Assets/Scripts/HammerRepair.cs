@@ -21,6 +21,7 @@ public class HammerRepair : MonoBehaviour
             spawnObject.transform.position = this.transform.position;
             spawnObject.transform.rotation = this.transform.rotation;
             this.gameObject.SetActive(false);
+            GameManager.Instance.totalRepairs =- 1;
 
         }
     }

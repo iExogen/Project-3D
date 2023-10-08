@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 626
     width: 521
     height: 313
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -172,8 +172,8 @@ MonoBehaviour:
     y: 0
     width: 345
     height: 603
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 46
+  controlID: 45
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 47
+  controlID: 46
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -483,7 +483,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -491,16 +491,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\stefv\OneDrive\Documenten\GitHub\Project-3D\FixIt
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 25}
-    m_SelectedIDs: 44770000
-    m_LastClickedID: 30532
-    m_ExpandedIDs: 000000002e7700003e770000407700004677000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f6760000
+    m_LastClickedID: 30454
+    m_ExpandedIDs: 00000000f67600000677000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,7 +528,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e770000
+    m_ExpandedIDs: 00000000f6760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -670,9 +670,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46de0000
-      m_LastClickedID: 56902
-      m_ExpandedIDs: 8c25ffff2229ffff2859ffff2462ffff5a75ffff7a7cffff4883ffff2085ffff568affffb291ffff6094ffffc097fffffc9bffff16aaffffd0abffffb4adffff7eafffff4ab1ffffeeb8ffff18c0ffffdcc1ffff96c3ffff78c5ffff50c9ffff16cbffff30cdffff1ccfffffd6d0ffff9ad2ffff84d6ffffa2e1fffff4e2ffff72f5ffff28fbffffbaae0000e0af0000fac2000066c3000016cb000088cb000076cc000050cf000060cf000084dc0000f6dc000028dd0000e4dd00005cde000086de0000
+      m_SelectedIDs: ccc10000
+      m_LastClickedID: 49612
+      m_ExpandedIDs: 5843ffff5c43ffff7c43ffff7c46ffff7c48ffff445cffff625effffb6c1ffff98c3fffff0c5ffffe2c7ffffb0d4ffff84dcffffc6deffff3eeeffffb0f0ffff48f3ffffaaf6ffffaef6ffffb2f6ffffbef6ffffc2f6ffff3af7ffff28fbffff86720000d0770000347800001e790000e27b0000d47c000020820000ee820000448300007e8c0000fc8e00002e900000ac920000a8b400001cb60000f6be000068c0000064c10000e0c10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1040,9 +1040,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.4016156, y: -1.6101329, z: 1.4724257}
+    m_Target: {x: 0.57691556, y: 0.8683106, z: 0.17808372}
     speed: 2
-    m_Value: {x: -5.4016156, y: -1.6101329, z: 1.4724257}
+    m_Value: {x: 0.57691556, y: 0.8683106, z: 0.17808372}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1088,13 +1088,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20002607, y: 0.5186653, z: -0.12627535, w: -0.8216182}
+    m_Target: {x: -0.20141768, y: 0.25717753, z: -0.054901913, w: -0.94355845}
     speed: 2
-    m_Value: {x: -0.20002347, y: 0.5186586, z: -0.1262737, w: -0.82160753}
+    m_Value: {x: -0.20141506, y: 0.2571742, z: -0.0549012, w: -0.9435462}
   m_Size:
-    m_Target: 4.174687
+    m_Target: 0.8751172
     speed: 2
-    m_Value: 4.174687
+    m_Value: 0.8751172
   m_Ortho:
     m_Target: 0
     speed: 2
