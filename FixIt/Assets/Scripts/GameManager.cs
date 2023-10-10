@@ -9,9 +9,16 @@ using Random = System.Random;
 
 public class GameManager : Singleton<GameManager>
 {
-    public int language = 1;
+    public enum language
+    {
+        English,
+        Dutch,
+        Arabian
+    }
+    public language chosenLanguage;
     public int totalRepairs;
-
+    public int repairsDone = 0;
+    string[,] dictionary = new string[0,2];
      private void Start()
     {
         Random random = new Random();

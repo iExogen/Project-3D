@@ -7,11 +7,6 @@ public class HammerRepair : MonoBehaviour
 {
     public GameObject repairedObject;
     private GameObject spawnObject;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,11 +19,5 @@ public class HammerRepair : MonoBehaviour
             GameManager.Instance.totalRepairs =- 1;
 
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

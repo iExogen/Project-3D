@@ -42,12 +42,17 @@ public class ButtonFollowVisual : MonoBehaviour
             {
                 case "English":
                     {
-                        GameManager.Instance.language = 1;
+                        GameManager.Instance.chosenLanguage = GameManager.language.English;
                         break;
                     }
                 case "Dutch":
                     {
-                        GameManager.Instance.language = 2;
+                        GameManager.Instance.chosenLanguage = GameManager.language.Dutch;
+                        break;
+                    }
+                case "Arabian":
+                    {
+                        GameManager.Instance.chosenLanguage = GameManager.language.Arabian;
                         break;
                     }
                 case "Start":

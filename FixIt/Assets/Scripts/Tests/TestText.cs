@@ -9,19 +9,24 @@ public class TestText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch (GameManager.Instance.language)
+        switch (GameManager.Instance.chosenLanguage)
         {
-            case 1:
+            case GameManager.language.English:
                 {
                     text.text = "welcome";
                     break;
                 }
-            case 2:
+            case GameManager.language.Dutch:
                 {
                     text.text = "welgekomen";
                     break;
                 }
-                default:
+            case GameManager.language.Arabian:
+                {
+                    text.text = "Arabian hello";
+                    break;
+                }
+            default:
                 {
                     text.text = "something went wrong, blame Seppe";
                     break;

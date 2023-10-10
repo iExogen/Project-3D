@@ -17,6 +17,7 @@ public class ScrewMachine : MonoBehaviour
     private Transform attachTransform;
 
     bool isFollowing = false;
+    bool needsFixing = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,19 +45,27 @@ public class ScrewMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isFollowing && leftActivate.action.ReadValue<float>() > 0.1f)
+        if (isFollowing && leftActivate.action.ReadValue<float>() > 0.1f && needsFixing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+            if(visualTarget.position == localAxis)
+            {
+                needsFixing = false;
+            }
         }
-        else if(isFollowing && rightActivate.action.ReadValue<float>() > 0.1f)
+        else if(isFollowing && rightActivate.action.ReadValue<float>() > 0.1f && needsFixing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+            if (visualTarget.position == localAxis)
+            {
+                needsFixing = false;
+            }
         }
     }
 }
