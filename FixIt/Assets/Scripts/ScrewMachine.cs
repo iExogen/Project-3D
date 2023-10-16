@@ -51,9 +51,10 @@ public class ScrewMachine : MonoBehaviour
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
-            if(visualTarget.position == localAxis)
+            if(visualTarget.localPosition.y >= 0.1f)
             {
                 needsFixing = false;
+                GameManager.Instance.repairsDone++;
             }
         }
         else if(isFollowing && rightActivate.action.ReadValue<float>() > 0.1f && needsFixing)
@@ -62,9 +63,10 @@ public class ScrewMachine : MonoBehaviour
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
-            if (visualTarget.position == localAxis)
+            if (visualTarget.localPosition.y >= 0.5f)
             {
                 needsFixing = false;
+                GameManager.Instance.repairsDone++;
             }
         }
     }
