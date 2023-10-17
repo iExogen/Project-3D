@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 503, y: 492}
   m_MaxSize: {x: 18097, y: 14042}
   vertical: 0
-  controlID: 110
+  controlID: 108
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,7 +322,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Objects/Map/Materials
+    - Assets/Objects/Map/Textures/Walls/Wall L
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -330,32 +330,32 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Objects/Map/Materials
+  - Assets/Objects/Map/Textures/Walls/Wall L
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\seppe\Documents\GitHub\Project-3D\FixIt
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 14.200012}
-    m_SelectedIDs: c4780000
-    m_LastClickedID: 30916
-    m_ExpandedIDs: 000000002270000096780000ac780000be78000000ca9a3b
+    scrollPos: {x: 0, y: 126.20001}
+    m_SelectedIDs: d0790000
+    m_LastClickedID: 31184
+    m_ExpandedIDs: 00000000aa780000c4780000d8780000e07800006279000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Wall F
+      m_OriginalName: Wall F
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 31174
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000096780000
+    m_ExpandedIDs: 00000000aa780000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -508,10 +508,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 302}
-      m_SelectedIDs: deeeffff
-      m_LastClickedID: -4386
-      m_ExpandedIDs: d8f9ffff94faffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6eb5ffff8cb6ffffeab6ffff94faffffd0faffff6872000052730000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -527,7 +527,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -574,8 +574,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -164.79999, y: -26.399994}
+      snapOffset: {x: -164.79999, y: -26.399994}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -866,9 +866,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.569255, y: -4.285354, z: -14.189284}
+    m_Target: {x: 38.870583, y: 9.982766, z: 24.480537}
     speed: 2
-    m_Value: {x: 12.569255, y: -4.285354, z: -14.189284}
+    m_Value: {x: 38.870583, y: 9.982766, z: 24.480537}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -914,13 +914,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.12193806, y: 0.87768257, z: -0.34123862, w: -0.31363168}
+    m_Target: {x: -0.011106609, y: 0.42870235, z: 0.00526132, w: 0.9033897}
     speed: 2
-    m_Value: {x: -0.12244952, y: 0.87720925, z: -0.3410546, w: -0.31494716}
+    m_Value: {x: -0.0110984305, y: 0.4300463, z: 0.005277843, w: 0.9027232}
   m_Size:
-    m_Target: 10.159805
+    m_Target: 28.45338
     speed: 2
-    m_Value: 9.7223015
+    m_Value: 28.45338
   m_Ortho:
     m_Target: 0
     speed: 2
