@@ -12,8 +12,8 @@ public class LanguageManager : Singleton<LanguageManager>
     }
     public enum TextID
     {
-        IntroText,
-        FirstTutorialText,
+        PlayerNameText,
+        ScoreText,
     }
     public Language chosenLanguage = Language.Dutch;
     private Dictionary<Language, Dictionary<TextID, string>> allTexts = new Dictionary<Language, Dictionary<TextID, string>>();
@@ -59,8 +59,11 @@ public class LanguageManager : Singleton<LanguageManager>
 
     private void InitAllText()
     {
-        AddElement(Language.English, TextID.IntroText, "Welcome");
-        AddElement(Language.Dutch, TextID.IntroText, "Welkom");
+        AddElement(Language.English, TextID.PlayerNameText, "Player1");
+        AddElement(Language.Dutch, TextID.PlayerNameText, "Speler1");
+
+        AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
+        AddElement(Language.Dutch, TextID.ScoreText, "Huidige reparaties: ");
     }
 
 }
