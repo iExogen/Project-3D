@@ -16,22 +16,22 @@ public class TextFiller : MonoBehaviour
     private float timeBetweenNPCScore = 10;
     void Start()
     {
-        introTextString = LanguageManager.Instance.GetText(LanguageManager.TextID.IntroText);
+        introTextString = LanguageManager.Instance.GetText(LanguageManager.TextID.PlayerNameText);
         introText.text = introTextString; 
-        scoreCounter.text = "repairs done:" +GameManager.Instance.repairsDone;
-        NPC1Score.text = "repairs done: " + npcScore;
-        NPC2Score.text = "repairs done: " + npcScore;
+        scoreCounter.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText)+GameManager.Instance.repairsDone;
+        NPC1Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+        NPC2Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreCounter.text = "repairs done: " + GameManager.Instance.repairsDone;
+        scoreCounter.text = scoreCounter.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + GameManager.Instance.repairsDone;
         if(Time.time > timeBetweenNPCScore*(npcScore+1))
         {
             npcScore++;
-            NPC1Score.text = "repairs done:" + npcScore;
-            NPC2Score.text = "repairs done: " + npcScore;
+            NPC1Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+            NPC2Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         }
     }
 }
