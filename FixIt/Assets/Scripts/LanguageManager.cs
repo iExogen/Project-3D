@@ -62,8 +62,8 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.PlayerNameText, "Player1");
         AddElement(Language.Dutch, TextID.PlayerNameText, "Speler1");
 
-        AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
-        AddElement(Language.Dutch, TextID.ScoreText, "Huidige reparaties: ");
+        AddElement(Language.English, TextID.ScoreText, "Repairs left: ");
+        AddElement(Language.Dutch, TextID.ScoreText, "Overige reparaties: ");
     }
 
 }
