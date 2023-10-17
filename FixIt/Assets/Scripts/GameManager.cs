@@ -8,9 +8,15 @@ using Random = System.Random;
 
 public class GameManager : Singleton<GameManager>
 {
-    public int totalRepairs = 3;
+    public int totalRepairs = 5;
     public int repairsDone = 0;
+    public int RepairsNeeded;
+    public float npcRepairs=0;
      private void Start()
     {
+    }
+    private void Update()
+    {
+        RepairsNeeded = totalRepairs - repairsDone;
     }
 }
