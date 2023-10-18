@@ -21,7 +21,6 @@ public class ScrewMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     public void OnTriggerEnter(Collider other)
@@ -45,6 +44,7 @@ public class ScrewMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (isFollowing && leftActivate.action.ReadValue<float>() > 0.1f && needsFixing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
