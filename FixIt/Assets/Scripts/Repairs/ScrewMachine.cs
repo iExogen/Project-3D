@@ -16,21 +16,22 @@ public class ScrewMachine : MonoBehaviour
     private Vector3 offset;
     private Transform attachTransform;
 
-    bool isFollowing = false;
-    bool needsFixing = true;
+
+    private bool isFollowing = false;
+    private bool needsFixing = true;
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "ScrewDriver")
         {
-            attachTransform = other.transform;
-            offset = visualTarget.position - attachTransform.position;
-            isFollowing = true;
+
+                attachTransform = other.transform;
+                offset = visualTarget.position - attachTransform.position;
+                isFollowing = true;
         }
     }
     public void OnTriggerExit(Collider other)
@@ -45,29 +46,30 @@ public class ScrewMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RemoveOldPlate();
+        
+    }
+
+    private void RemoveOldPlate()
+    {
         if (isFollowing && leftActivate.action.ReadValue<float>() > 0.1f && needsFixing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
-            if(visualTarget.localPosition.z >= 0.45f)
-            {
-                needsFixing = false;
-                GameManager.Instance.repairsDone++;
-            }
         }
-        else if(isFollowing && rightActivate.action.ReadValue<float>() > 0.1f && needsFixing)
+        else if (isFollowing && rightActivate.action.ReadValue<float>() > 0.1f && needsFixing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(attachTransform.position + offset);
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
-            if (visualTarget.localPosition.z >= 0.45f)
-            {
-                needsFixing = false;
-                GameManager.Instance.repairsDone++;
-            }
+        }
+        if (visualTarget.localPosition.z <= -0.1 && needsFixing)
+        {
+            needsFixing = false;
+            GameManager.Instance.screwsRemoved++;
         }
     }
 }
