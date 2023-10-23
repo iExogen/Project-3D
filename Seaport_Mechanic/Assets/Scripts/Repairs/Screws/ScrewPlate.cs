@@ -8,6 +8,7 @@ public class ScrewPlate : MonoBehaviour
     public GameObject screwPlateFixedMovable;
     public GameObject screwPlateBrokenPos;
     public GameObject screwPlateBrokenMovable;
+    public GameObject sparks;
 
     private bool removedPlate = false;
     private bool AddRepair = true;
@@ -46,6 +47,7 @@ public class ScrewPlate : MonoBehaviour
         {
             AddRepair = false;
             GameManager.Instance.repairsDone++;
+            sparks.SetActive(false);
         }
     }
 }
