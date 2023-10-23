@@ -15,7 +15,11 @@ public class LanguageManager : Singleton<LanguageManager>
         PlayerNameText,
         ScoreText,
         ScoreDone,
+        StartButton,
+        EndButton,
         RestartButton,
+        EndScreenSucces,
+        EndScreenFailure,
     }
     public Language chosenLanguage = Language.Dutch;
     private Dictionary<Language, Dictionary<TextID, string>> allTexts = new Dictionary<Language, Dictionary<TextID, string>>();
@@ -70,8 +74,20 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.ScoreDone, "DONE");
         AddElement(Language.Dutch, TextID.ScoreDone, "GEDAAN");
 
+        AddElement(Language.English, TextID.StartButton, "Start");
+        AddElement(Language.Dutch, TextID.StartButton, "Starten");
+
+        AddElement(Language.English, TextID.EndButton, "Finish");
+        AddElement(Language.Dutch, TextID.EndButton, "Eindig");
+
         AddElement(Language.English, TextID.RestartButton, "restart");
         AddElement(Language.Dutch, TextID.RestartButton, "herstarten");
+
+        AddElement(Language.English, TextID.EndScreenSucces, "You finished ");
+        AddElement(Language.Dutch, TextID.EndScreenSucces, "je bent geindigt op plaats ");
+
+        AddElement(Language.English, TextID.EndScreenFailure, "You didn't finish your repairs!");
+        AddElement(Language.Dutch, TextID.EndScreenFailure, "je hebt je reparaties niet afgemaakt!");
     }
 
 }

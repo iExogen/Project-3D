@@ -12,7 +12,7 @@ public class EndSceneController : MonoBehaviour
     {
         if(GameManager.Instance.repairsDone == GameManager.Instance.totalRepairs)
         {
-            review.text = "succes! You finished in " + GameManager.Instance.finishPlace + "th place";
+            review.text =LanguageManager.Instance.GetText(LanguageManager.TextID.EndScreenSucces) + GameManager.Instance.finishPlace;
         }
         else
         {

@@ -10,6 +10,9 @@ public class ButtonFollowVisual : MonoBehaviour
     public Vector3 localAxis;
     public float resetSpeed = 5;
 
+    public GameObject Tool1;
+    public GameObject Tool2;
+    public GameObject Tool3;
 
     private bool freeze = false;
 
@@ -73,6 +76,17 @@ public class ButtonFollowVisual : MonoBehaviour
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis); 
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+
+            if(this.gameObject.name == "Button.Stop")
+            {
+                SceneManager.LoadScene("EndScene");
+            }
+            else if(this.gameObject.name == "Button.Start")
+            {
+                Tool1.SetActive(true);
+                Tool2.SetActive(true);
+                Tool3.SetActive(true);
+            }
         }
         else
         {
