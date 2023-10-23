@@ -17,10 +17,10 @@ public class TextFiller : MonoBehaviour
 
     public Slider playerSlider;
     public Slider NPC1Slider;
-    public Slider NPC2SLider;
+    public Slider NPC2Slider;
     public Slider NPC3Slider;
     public Slider NPC5Slider;
-    public Slider npc6Slider;
+    public Slider NPC6Slider;
 
     private string PlayerNameString;
     private float npcScore = 0;
@@ -44,11 +44,17 @@ public class TextFiller : MonoBehaviour
         if(Time.time > timeBetweenNPCScore*(npcScore+1))
         {
             npcScore++;
+            playerSlider.value = GameManager.Instance.repairsDone * 0.2f;
             NPC1Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+            NPC1Slider.value = npcScore * 0.1f;
             NPC2Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+            NPC2Slider.value = npcScore * 0.1f;
             NPC3Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+            NPC3Slider.value = npcScore * 0.1f;
             NPC5Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+            NPC5Slider.value = npcScore * 0.1f;
             NPC6Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+            NPC6Slider.value = npcScore * 0.1f;
         }
     }
 }
