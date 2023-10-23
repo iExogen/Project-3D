@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraRayCast : MonoBehaviour
 {
-    public GameObject handScoreBoard;
+    private GameObject handScoreBoard;
     // Start is called before the first frame update
     void Start()
     {
