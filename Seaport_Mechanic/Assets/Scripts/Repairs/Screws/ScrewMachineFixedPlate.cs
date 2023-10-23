@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ScrewMachineFixedPlate : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class ScrewMachineFixedPlate : MonoBehaviour
 
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -56,6 +58,7 @@ public class ScrewMachineFixedPlate : MonoBehaviour
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+            
         }
         else if (isFollowing && rightActivate.action.ReadValue<float>() > 0.1f && needsFixing)
         {

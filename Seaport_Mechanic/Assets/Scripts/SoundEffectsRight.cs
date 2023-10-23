@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.OpenVR;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.UI;
+
 
 public class SoundEffectsRight : MonoBehaviour
 {
@@ -12,6 +16,7 @@ public class SoundEffectsRight : MonoBehaviour
     private bool isPickedUp = false;
     private bool isUnlocked = true;
     // Start is called before the first frame update
+
     void Start()
     {
     }
@@ -26,20 +31,20 @@ public class SoundEffectsRight : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "ScrewDriver")
+        if (other.gameObject.tag == "ScrewDriver")
         {
             isPickedUp = false;
         }
     }
 
-
     // Update is called once per frame
     void Update()
     {
-     if(rightActivate.action.ReadValue<float>() > 0.1f && isPickedUp && isUnlocked)
+     if (rightActivate.action.ReadValue<float>() > 0.1f && isPickedUp && isUnlocked)
         {
+
             isUnlocked = false;
-            screwDriver.Play();
+            screwDriver.Play();          
         }
      else if(rightActivate.action.ReadValue<float>() < 0.1f && !isUnlocked)
         {

@@ -9,6 +9,8 @@ public class HammerRepair : MonoBehaviour
     private GameObject spawnObject;
     private int hitsOnEngine = 0;
 
+    public GameObject sparks;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Hammer")
@@ -21,6 +23,7 @@ public class HammerRepair : MonoBehaviour
                 spawnObject.transform.rotation = this.transform.rotation;
                 this.gameObject.SetActive(false);
                 GameManager.Instance.repairsDone++;
+                sparks.SetActive(false);
             }
 
         }
