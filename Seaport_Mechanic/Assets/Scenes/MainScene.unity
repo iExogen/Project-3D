@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -11177,7 +11177,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -28511,6 +28511,8 @@ MonoBehaviour:
   NPC3Slider: {fileID: 1894928373}
   NPC5Slider: {fileID: 1184024751}
   NPC6Slider: {fileID: 537504972}
+  startButton: {fileID: 170305225}
+  endButton: {fileID: 598135703}
 --- !u!1 &1280327010
 GameObject:
   m_ObjectHideFlags: 0
@@ -41207,6 +41209,8 @@ MonoBehaviour:
   NPC3Slider: {fileID: 1803840449}
   NPC5Slider: {fileID: 467760499}
   NPC6Slider: {fileID: 1667521304}
+  startButton: {fileID: 0}
+  endButton: {fileID: 0}
 --- !u!114 &1590063576
 MonoBehaviour:
   m_ObjectHideFlags: 0

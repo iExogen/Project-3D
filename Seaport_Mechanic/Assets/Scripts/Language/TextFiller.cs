@@ -23,11 +23,15 @@ public class TextFiller : MonoBehaviour
     public Slider NPC6Slider;
 
     private string PlayerNameString;
-    private float npcScore = 0;
+    private float npcScore;
     private float timeBetweenNPCScore = 10;
+
+    public TMP_Text startButton;
+    public TMP_Text endButton;
+
     void Start()
     {
-
+        npcScore = 0;
         PlayerNameString = LanguageManager.Instance.GetText(LanguageManager.TextID.PlayerNameText);
         PlayerName.text = PlayerNameString; 
         PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText)+GameManager.Instance.repairsDone;
@@ -36,6 +40,9 @@ public class TextFiller : MonoBehaviour
         NPC3Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         NPC5Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         NPC6Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
+
+        startButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.StartButton);
+        endButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EndButton);
     }
 
     // Update is called once per frame
