@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TextFiller : MonoBehaviour
 {
-    // Start is called before the first frame update
     public TMP_Text PlayerName;
     public TMP_Text PlayerScore;
     public TMP_Text NPC1Score;
@@ -23,14 +23,16 @@ public class TextFiller : MonoBehaviour
     public Slider NPC6Slider;
 
     private string PlayerNameString;
-    private float npcScore;
+    private float npcScore=0;
     private float timeBetweenNPCScore = 10;
+    private float timer;
 
     public TMP_Text startButton;
     public TMP_Text endButton;
 
     void Start()
     {
+        timer = Time.time;
         npcScore = 0;
         PlayerNameString = LanguageManager.Instance.GetText(LanguageManager.TextID.PlayerNameText);
         PlayerName.text = PlayerNameString; 
@@ -50,7 +52,7 @@ public class TextFiller : MonoBehaviour
     {
 
             PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + GameManager.Instance.repairsDone;
-            if (Time.time > timeBetweenNPCScore * (npcScore + 1))
+            if (Time.time > timer+timeBetweenNPCScore * (npcScore + 1))
             {
                 npcScore++;
                 playerSlider.value = GameManager.Instance.repairsDone * 0.2f;
