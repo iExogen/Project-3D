@@ -21,7 +21,7 @@ public class LanguageManager : Singleton<LanguageManager>
         EndScreenSucces,
         EndScreenFailure,
     }
-    public Language chosenLanguage = Language.Dutch;
+    public Language chosenLanguage = Language.English;
     private Dictionary<Language, Dictionary<TextID, string>> allTexts = new Dictionary<Language, Dictionary<TextID, string>>();
     // Start is called before the first frame update
     void Start()

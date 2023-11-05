@@ -14,22 +14,39 @@ public class languageStarter : MonoBehaviour
     void Start()
     {
         interactable = GetComponent<XRSimpleInteractable>();
-
+        languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
         interactable.selectEntered.AddListener(Select);
     }
     public void Select(BaseInteractionEventArgs hover)
     {
         if (hover.interactorObject is XRRayInteractor)
         {
-            if(interactable.gameObject.tag == "NextLanguage")
+            if (interactable.gameObject.tag == "NextLanguage")
             {
-                LanguageManager.Instance.chosenLanguage++;
+                if (LanguageManager.Instance.chosenLanguage == LanguageManager.Language.Arabic)
+                {
+                    LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+                    languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
+                }
+                else
+                {
+                    LanguageManager.Instance.chosenLanguage++;
+                    languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
+                }
             }
             else if(interactable.gameObject.tag == "PreviousLanguage")
             {
-                LanguageManager.Instance.chosenLanguage--;
+                if(LanguageManager.Instance.chosenLanguage == LanguageManager.Language.English)
+                {
+                    LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Arabic;
+                    languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
+                }
+                else
+                {
+                    LanguageManager.Instance.chosenLanguage--;
+                    languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
+                }
             }
-            SceneManager.LoadScene(1);
         }
     }
     // Update is called once per frame

@@ -21,7 +21,7 @@ public class StartGame : MonoBehaviour
         {
             if (interactable.gameObject.tag == "Door")
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(1,LoadSceneMode.Single);
             }
         }
     }
