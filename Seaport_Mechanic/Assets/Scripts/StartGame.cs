@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class languageStarter : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
     private XRSimpleInteractable interactable;
-    public TMP_Text languageText;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,20 +19,10 @@ public class languageStarter : MonoBehaviour
     {
         if (hover.interactorObject is XRRayInteractor)
         {
-            if(interactable.gameObject.tag == "NextLanguage")
+            if (interactable.gameObject.tag == "Door")
             {
-                LanguageManager.Instance.chosenLanguage++;
+                SceneManager.LoadScene(1);
             }
-            else if(interactable.gameObject.tag == "PreviousLanguage")
-            {
-                LanguageManager.Instance.chosenLanguage--;
-            }
-            SceneManager.LoadScene(1);
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
