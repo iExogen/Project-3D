@@ -30,7 +30,7 @@ public class languageStarter : MonoBehaviour
             {
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Arabic;
             }
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene(1);
         }
     }
     // Update is called once per frame
