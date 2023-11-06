@@ -3,23 +3,38 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class languageStarter : MonoBehaviour
 {
+    public enum LanguageFlag
+    {
+        belgian,
+        american,
+        arab,
+    }
     private XRSimpleInteractable interactable;
     public TMP_Text languageText;
+    public Texture belgianFlag;
+    public Texture AmericanFlag;
+    public Texture ArabFlag;
+    public RawImage flagImage;
+    private Texture[] flags = new Texture[3];
 
     // Start is called before the first frame update
     void Start()
     {
+        flags[0] = AmericanFlag;
+        flags[1] = belgianFlag;
+        flags[2] = ArabFlag;
         interactable = GetComponent<XRSimpleInteractable>();
         languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
-        interactable.selectEntered.AddListener(Select);
+        interactable.hoverEntered.AddListener(Follow);
     }
-    public void Select(BaseInteractionEventArgs hover)
+    public void Follow(BaseInteractionEventArgs hover)
     {
-        if (hover.interactorObject is XRRayInteractor)
+        if (hover.interactorObject is XRPokeInteractor)
         {
             if (interactable.gameObject.tag == "NextLanguage")
             {
@@ -33,6 +48,7 @@ public class languageStarter : MonoBehaviour
                     LanguageManager.Instance.chosenLanguage++;
                     languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
                 }
+                flagImage.texture = flags[(int)LanguageManager.Instance.chosenLanguage];
             }
             else if(interactable.gameObject.tag == "PreviousLanguage")
             {
@@ -46,6 +62,7 @@ public class languageStarter : MonoBehaviour
                     LanguageManager.Instance.chosenLanguage--;
                     languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
                 }
+                flagImage.texture = flags[(int)LanguageManager.Instance.chosenLanguage];
             }
         }
     }

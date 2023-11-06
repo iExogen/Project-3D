@@ -7,7 +7,7 @@ public class LanguageManager : Singleton<LanguageManager>
     public enum Language
     {
         English,
-        Dutch,
+        Nederlands,
         Arabic
     }
     public enum TextID
@@ -66,28 +66,28 @@ public class LanguageManager : Singleton<LanguageManager>
     private void InitAllText()
     {
         AddElement(Language.English, TextID.PlayerNameText, "Player1");
-        AddElement(Language.Dutch, TextID.PlayerNameText, "Speler1");
+        AddElement(Language.Nederlands, TextID.PlayerNameText, "Speler1");
 
         AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
-        AddElement(Language.Dutch, TextID.ScoreText, "Huidige reparaties: ");
+        AddElement(Language.Nederlands, TextID.ScoreText, "Huidige reparaties: ");
 
         AddElement(Language.English, TextID.ScoreDone, "DONE");
-        AddElement(Language.Dutch, TextID.ScoreDone, "GEDAAN");
+        AddElement(Language.Nederlands, TextID.ScoreDone, "GEDAAN");
 
         AddElement(Language.English, TextID.StartButton, "Start");
-        AddElement(Language.Dutch, TextID.StartButton, "Starten");
+        AddElement(Language.Nederlands, TextID.StartButton, "Starten");
 
         AddElement(Language.English, TextID.EndButton, "Finish");
-        AddElement(Language.Dutch, TextID.EndButton, "Eindig");
+        AddElement(Language.Nederlands, TextID.EndButton, "Eindig");
 
         AddElement(Language.English, TextID.RestartButton, "restart");
-        AddElement(Language.Dutch, TextID.RestartButton, "herstarten");
+        AddElement(Language.Nederlands, TextID.RestartButton, "herstarten");
 
         AddElement(Language.English, TextID.EndScreenSucces, "You finished ");
-        AddElement(Language.Dutch, TextID.EndScreenSucces, "je bent geindigt op plaats ");
+        AddElement(Language.Nederlands, TextID.EndScreenSucces, "je bent geindigt op plaats ");
 
         AddElement(Language.English, TextID.EndScreenFailure, "You didn't finish your repairs!");
-        AddElement(Language.Dutch, TextID.EndScreenFailure, "je hebt je reparaties niet afgemaakt!");
+        AddElement(Language.Nederlands, TextID.EndScreenFailure, "je hebt je reparaties niet afgemaakt!");
     }
 
 }
