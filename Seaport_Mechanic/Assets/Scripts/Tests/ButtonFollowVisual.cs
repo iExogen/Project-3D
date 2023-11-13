@@ -9,11 +9,12 @@ public class ButtonFollowVisual : MonoBehaviour
     public Transform visualTarget;
     public Vector3 localAxis;
     public float resetSpeed = 5;
+    private float followAngleThreshold = 80;
 
-    public GameObject Tool1;
-    public GameObject Tool2;
-    public GameObject Tool3;
-
+    public GameObject tool1;
+    public GameObject tool2;
+    public GameObject tool3;
+    public GameObject[] tools = new GameObject[3];
     private bool freeze = false;
 
     private Vector3 initialLocalPos;
@@ -32,6 +33,10 @@ public class ButtonFollowVisual : MonoBehaviour
         interactable.hoverEntered.AddListener(Follow);
         interactable.hoverExited.AddListener(Reset);
         interactable.selectEntered.AddListener(Freeze);
+
+        tools[0] = tool1;
+        tools[1] = tool2;
+        tools[2] = tool3;
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -39,11 +44,17 @@ public class ButtonFollowVisual : MonoBehaviour
         if(hover.interactorObject is XRPokeInteractor)
         {
             XRPokeInteractor interactor= (XRPokeInteractor)hover.interactorObject;
-            isFollowing = true;
-            freeze = false;
 
             pokeAttachTransform = interactor.attachTransform;
             offset = visualTarget.position - pokeAttachTransform.position;
+
+            float pokeAngle = Vector3.Angle(offset, visualTarget.TransformDirection(localAxis));
+
+            if(pokeAngle < followAngleThreshold)
+            {
+                isFollowing = true;
+                freeze = false;
+            }
         }
     }
 
@@ -83,9 +94,10 @@ public class ButtonFollowVisual : MonoBehaviour
             }
             else if(this.gameObject.name == "Button.Start")
             {
-                Tool1.SetActive(true);
-                Tool2.SetActive(true);
-                Tool3.SetActive(true);
+                foreach(GameObject t in tools)
+                {
+                    t.SetActive(true);
+                }
             }
         }
         else

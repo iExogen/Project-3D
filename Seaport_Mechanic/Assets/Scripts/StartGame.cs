@@ -2,27 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class StartGame : MonoBehaviour
 {
-    private XRSimpleInteractable interactable;
-    // Start is called before the first frame update
-    void Start()
-    {
-        interactable = GetComponent<XRSimpleInteractable>();
+    private bool onDoor = false;
+    public InputActionProperty leftSelect;
+    public InputActionProperty rightSelect;
 
-        interactable.selectEntered.AddListener(Select);
-    }
-    public void Select(BaseInteractionEventArgs hover)
+    private void OnTriggerEnter(Collider other)
     {
-        if (hover.interactorObject is XRRayInteractor)
+        if(other.gameObject.CompareTag("Door"))
         {
-            if (interactable.gameObject.tag == "Door")
-            {
-                SceneManager.LoadScene(1,LoadSceneMode.Single);
-            }
+            onDoor = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Door"))
+        {
+            onDoor = false;
+        }
+    }
+    private void Update()
+    {
+        if(onDoor && leftSelect.action.ReadValue<float>() > 0.1f)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (onDoor && rightSelect.action.ReadValue<float>() > 0.1f)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }
