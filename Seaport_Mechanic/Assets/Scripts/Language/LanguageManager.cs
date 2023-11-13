@@ -67,27 +67,35 @@ public class LanguageManager : Singleton<LanguageManager>
     {
         AddElement(Language.English, TextID.PlayerNameText, "Player1");
         AddElement(Language.Nederlands, TextID.PlayerNameText, "Speler1");
+        AddElement(Language.Arabic, TextID.PlayerNameText, "???? 1");
 
         AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
         AddElement(Language.Nederlands, TextID.ScoreText, "Huidige reparaties: ");
+        AddElement(Language.Arabic, TextID.ScoreText, "????????? ???????: ");
 
         AddElement(Language.English, TextID.ScoreDone, "DONE");
         AddElement(Language.Nederlands, TextID.ScoreDone, "GEDAAN");
+        AddElement(Language.Arabic, TextID.ScoreDone, "????");
 
         AddElement(Language.English, TextID.StartButton, "Start");
         AddElement(Language.Nederlands, TextID.StartButton, "Starten");
+        AddElement(Language.Arabic, TextID.StartButton, "???");
 
         AddElement(Language.English, TextID.EndButton, "Finish");
         AddElement(Language.Nederlands, TextID.EndButton, "Eindig");
+        AddElement(Language.Arabic, TextID.EndButton, "?????");
 
         AddElement(Language.English, TextID.RestartButton, "restart");
         AddElement(Language.Nederlands, TextID.RestartButton, "herstarten");
+        AddElement(Language.Arabic, TextID.RestartButton, "????? ?????");
 
         AddElement(Language.English, TextID.EndScreenSucces, "You finished ");
         AddElement(Language.Nederlands, TextID.EndScreenSucces, "je bent geindigt op plaats ");
+        AddElement(Language.Arabic, TextID.EndScreenSucces, "??? ?? ????? ");
 
         AddElement(Language.English, TextID.EndScreenFailure, "You didn't finish your repairs!");
         AddElement(Language.Nederlands, TextID.EndScreenFailure, "je hebt je reparaties niet afgemaakt!");
+        AddElement(Language.Arabic, TextID.EndScreenFailure, "??? ?? ???? ?? ????????!");
     }
 
 }

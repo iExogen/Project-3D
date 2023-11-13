@@ -16,7 +16,6 @@ public class ScrewMachine : MonoBehaviour
     private Vector3 offset;
     private Transform attachTransform;
 
-
     private bool isFollowing = false;
     private bool needsFixing = true;
     // Start is called before the first frame update
