@@ -11,10 +11,7 @@ public class ButtonFollowVisual : MonoBehaviour
     public float resetSpeed = 5;
     private float followAngleThreshold = 80;
 
-    public GameObject tool1;
-    public GameObject tool2;
-    public GameObject tool3;
-    public GameObject[] tools = new GameObject[3];
+    public InventoryManager inventory;
     private bool freeze = false;
 
     private Vector3 initialLocalPos;
@@ -33,10 +30,6 @@ public class ButtonFollowVisual : MonoBehaviour
         interactable.hoverEntered.AddListener(Follow);
         interactable.hoverExited.AddListener(Reset);
         interactable.selectEntered.AddListener(Freeze);
-
-        tools[0] = tool1;
-        tools[1] = tool2;
-        tools[2] = tool3;
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -94,10 +87,7 @@ public class ButtonFollowVisual : MonoBehaviour
             }
             else if(this.gameObject.name == "Button.Start")
             {
-                foreach(GameObject t in tools)
-                {
-                    t.SetActive(true);
-                }
+                inventory.hasPressedStart = true;
             }
         }
         else
