@@ -8,11 +8,13 @@ public class LanguageManager : Singleton<LanguageManager>
     {
         English,
         Nederlands,
-        Arabic
     }
     public enum TextID
     {
         PlayerNameText,
+        SettingsText,
+        LanguageText,
+        EquipmentText,
         ScoreText,
         ScoreDone,
         StartButton,
@@ -20,6 +22,8 @@ public class LanguageManager : Singleton<LanguageManager>
         RestartButton,
         EndScreenSucces,
         EndScreenFailure,
+        ToUpperText,
+        ToLowerText
     }
     public Language chosenLanguage = Language.English;
     private Dictionary<Language, Dictionary<TextID, string>> allTexts = new Dictionary<Language, Dictionary<TextID, string>>();
@@ -67,35 +71,42 @@ public class LanguageManager : Singleton<LanguageManager>
     {
         AddElement(Language.English, TextID.PlayerNameText, "Player1");
         AddElement(Language.Nederlands, TextID.PlayerNameText, "Speler1");
-        AddElement(Language.Arabic, TextID.PlayerNameText, "???? 1");
+
+        AddElement(Language.English, TextID.SettingsText, "Settings");
+        AddElement(Language.Nederlands, TextID.SettingsText, "instellingen");
+
+        AddElement(Language.English, TextID.LanguageText, "Language:");
+        AddElement(Language.Nederlands, TextID.LanguageText, "taal:");
+
+        AddElement(Language.English, TextID.EquipmentText, "Pick up");
+        AddElement(Language.Nederlands, TextID.EquipmentText, "oprapen");
 
         AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
         AddElement(Language.Nederlands, TextID.ScoreText, "Huidige reparaties: ");
-        AddElement(Language.Arabic, TextID.ScoreText, "????????? ???????: ");
 
         AddElement(Language.English, TextID.ScoreDone, "DONE");
         AddElement(Language.Nederlands, TextID.ScoreDone, "GEDAAN");
-        AddElement(Language.Arabic, TextID.ScoreDone, "????");
 
         AddElement(Language.English, TextID.StartButton, "Start");
         AddElement(Language.Nederlands, TextID.StartButton, "Starten");
-        AddElement(Language.Arabic, TextID.StartButton, "???");
 
         AddElement(Language.English, TextID.EndButton, "Finish");
         AddElement(Language.Nederlands, TextID.EndButton, "Eindig");
-        AddElement(Language.Arabic, TextID.EndButton, "?????");
 
         AddElement(Language.English, TextID.RestartButton, "restart");
         AddElement(Language.Nederlands, TextID.RestartButton, "herstarten");
-        AddElement(Language.Arabic, TextID.RestartButton, "????? ?????");
 
         AddElement(Language.English, TextID.EndScreenSucces, "You finished ");
         AddElement(Language.Nederlands, TextID.EndScreenSucces, "je bent geindigd op plaats ");
-        AddElement(Language.Arabic, TextID.EndScreenSucces, "??? ?? ????? ");
 
         AddElement(Language.English, TextID.EndScreenFailure, "You didn't finish your repairs!");
         AddElement(Language.Nederlands, TextID.EndScreenFailure, "je hebt je reparaties niet afgemaakt!");
-        AddElement(Language.Arabic, TextID.EndScreenFailure, "??? ?? ???? ?? ????????!");
+
+        AddElement(Language.English, TextID.ToUpperText, "To upper");
+        AddElement(Language.Nederlands, TextID.ToUpperText, "Naar Boven");
+
+        AddElement(Language.English, TextID.ToLowerText, "To floor");
+        AddElement(Language.Nederlands, TextID.ToLowerText, "Naar beneden");
     }
 
 }

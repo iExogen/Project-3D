@@ -22,6 +22,9 @@ public class TextFiller : MonoBehaviour
     public Slider NPC5Slider;
     public Slider NPC6Slider;
 
+    public TMP_Text toUpperText;
+    public TMP_Text toLowerText;
+
     private string PlayerNameString;
     private float npcScore=0;
     private float timeBetweenNPCScore = 10;
@@ -45,6 +48,9 @@ public class TextFiller : MonoBehaviour
 
         startButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.StartButton);
         endButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EndButton);
+
+        toUpperText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToUpperText);
+        toLowerText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToLowerText);
     }
 
     // Update is called once per frame
