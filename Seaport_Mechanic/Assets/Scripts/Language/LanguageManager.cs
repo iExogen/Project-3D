@@ -90,7 +90,7 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.Arabic, TextID.RestartButton, "????? ?????");
 
         AddElement(Language.English, TextID.EndScreenSucces, "You finished ");
-        AddElement(Language.Nederlands, TextID.EndScreenSucces, "je bent geindigt op plaats ");
+        AddElement(Language.Nederlands, TextID.EndScreenSucces, "je bent geindigd op plaats ");
         AddElement(Language.Arabic, TextID.EndScreenSucces, "??? ?? ????? ");
 
         AddElement(Language.English, TextID.EndScreenFailure, "You didn't finish your repairs!");

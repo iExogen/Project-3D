@@ -31,7 +31,7 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         if(!hasPressedStart) return;
-        if(Vector3.Distance(inventory.transform.position,head.position)>=2)
+        if(Vector3.Distance(inventory.transform.position,head.position)>=20)
         {
             inventory.transform.localPosition = new Vector3(0, -10, 0);
             isInvisible = true;
