@@ -8,6 +8,9 @@ public class StretchBand : MonoBehaviour
     public InputActionProperty leftActivate;
     public InputActionProperty rightActivate;
 
+    public GameObject brokenStretch;
+    public GameObject brokenStretchMovable;
+
     public bool isColliding = false;
     // Start is called before the first frame update
     void Start()
@@ -17,14 +20,14 @@ public class StretchBand : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Plier")
+        if (other.gameObject.CompareTag("Plier"))
         {
             isColliding = true;
         }
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Plier")
+        if (other.gameObject.CompareTag("Plier"))
         {
             isColliding = false;
         }
@@ -36,7 +39,13 @@ public class StretchBand : MonoBehaviour
     {
         if(isColliding && leftActivate.action.triggered)
         {
-            this.GetComponent<Rigidbody>().isKinematic = false;
+            brokenStretch.gameObject.SetActive(false);
+            brokenStretchMovable.SetActive(true);
+        }
+        if (isColliding && rightActivate.action.triggered)
+        {
+            brokenStretch.gameObject.SetActive(false);
+            brokenStretchMovable.SetActive(true);
         }
     }
 }

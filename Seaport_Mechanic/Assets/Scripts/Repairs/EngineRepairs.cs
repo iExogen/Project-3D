@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class EngineRepairs : MonoBehaviour
 {
-
-    public bool oldStretchInPlace = true;
+    public bool oldStretchInPlace;
+    public GameObject brokenStretchMovable;
     public GameObject repairedStretch;
+    public GameObject repairedStretchMovable;
+    public GameObject sparks;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +17,21 @@ public class EngineRepairs : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "StretchBand")
+        if (other.gameObject == brokenStretchMovable)
         {
             oldStretchInPlace = false;
+            other.gameObject.SetActive(false);
         }
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "StretchBand" && !oldStretchInPlace)
+        if(other.gameObject ==  repairedStretchMovable)
         {
             GameManager.Instance.repairsDone++;
-            other.gameObject.SetActive(false);
+            repairedStretchMovable.SetActive(false);
             repairedStretch.SetActive(true);
+            sparks.SetActive(false);
         }
     }
 }

@@ -10,7 +10,7 @@ public class EndSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(GameManager.Instance.repairsDone == GameManager.Instance.totalRepairs)
+        if(GameManager.Instance.repairsDone >= GameManager.Instance.totalRepairs)
         {
             review.text =LanguageManager.Instance.GetText(LanguageManager.TextID.EndScreenSucces) + GameManager.Instance.finishPlace;
         }
