@@ -23569,7 +23569,7 @@ GameObject:
   - component: {fileID: 1061095075}
   - component: {fileID: 1061095074}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ToUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26881,7 +26881,7 @@ GameObject:
   - component: {fileID: 1087656340}
   - component: {fileID: 1087656339}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ToLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34599,6 +34599,8 @@ MonoBehaviour:
   NPC3Slider: {fileID: 1894928373}
   NPC5Slider: {fileID: 1184024751}
   NPC6Slider: {fileID: 537504972}
+  toUpperText: {fileID: 1061095074}
+  toLowerText: {fileID: 1087656339}
   startButton: {fileID: 170305225}
   endButton: {fileID: 598135703}
 --- !u!1 &1280327010
@@ -41629,7 +41631,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -47398,6 +47400,8 @@ MonoBehaviour:
   NPC3Slider: {fileID: 1803840449}
   NPC5Slider: {fileID: 467760499}
   NPC6Slider: {fileID: 1667521304}
+  toUpperText: {fileID: 0}
+  toLowerText: {fileID: 0}
   startButton: {fileID: 598135703}
   endButton: {fileID: 170305225}
 --- !u!114 &1590063576

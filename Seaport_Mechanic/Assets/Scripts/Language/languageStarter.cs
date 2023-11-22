@@ -12,7 +12,6 @@ public class languageStarter : MonoBehaviour
     {
         belgian,
         american,
-        arab,
     }
     private XRSimpleInteractable interactable;
     public TMP_Text languageText;
@@ -27,7 +26,6 @@ public class languageStarter : MonoBehaviour
     {
         flags[0] = AmericanFlag;
         flags[1] = belgianFlag;
-        flags[2] = ArabFlag;
         interactable = GetComponent<XRSimpleInteractable>();
         languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
         interactable.hoverEntered.AddListener(Follow);
@@ -38,7 +36,7 @@ public class languageStarter : MonoBehaviour
         {
             if (interactable.gameObject.tag == "NextLanguage")
             {
-                if (LanguageManager.Instance.chosenLanguage == LanguageManager.Language.Arabic)
+                if (LanguageManager.Instance.chosenLanguage == LanguageManager.Language.Nederlands)
                 {
                     LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
                     languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
@@ -54,7 +52,7 @@ public class languageStarter : MonoBehaviour
             {
                 if(LanguageManager.Instance.chosenLanguage == LanguageManager.Language.English)
                 {
-                    LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Arabic;
+                    LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
                     languageText.text = LanguageManager.Instance.chosenLanguage.ToString();
                 }
                 else
