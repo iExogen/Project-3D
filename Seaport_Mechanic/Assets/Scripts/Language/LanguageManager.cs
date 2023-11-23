@@ -102,10 +102,10 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.EndScreenFailure, "You didn't finish your repairs!");
         AddElement(Language.Nederlands, TextID.EndScreenFailure, "je hebt je reparaties niet afgemaakt!");
 
-        AddElement(Language.English, TextID.ToUpperText, "To upper");
+        AddElement(Language.English, TextID.ToUpperText, "To upper floor");
         AddElement(Language.Nederlands, TextID.ToUpperText, "Naar Boven");
 
-        AddElement(Language.English, TextID.ToLowerText, "To floor");
+        AddElement(Language.English, TextID.ToLowerText, "To ground floor");
         AddElement(Language.Nederlands, TextID.ToLowerText, "Naar beneden");
     }
 

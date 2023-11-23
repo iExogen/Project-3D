@@ -3,7 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = System.Random;
 
 public class GameManager : Singleton<GameManager>
@@ -13,7 +15,8 @@ public class GameManager : Singleton<GameManager>
     public int screwsRemoved = 0;
     public int screwsFixed = 0;
     public int finishPlace = 1;
-     private void Start()
+    private void Start()
     {
     }
+
 }
