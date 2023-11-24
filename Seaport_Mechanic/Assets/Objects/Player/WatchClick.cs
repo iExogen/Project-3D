@@ -2,41 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class WatchClick : MonoBehaviour
 {
-    public GameObject button;
-    public UnityEvent onPress;
-    public UnityEvent onRelease;
-    GameObject presser;
     AudioSource sound;
-    bool isPressed;
 
-    [SerializeField]GameObject _miniStraddle;
+    bool hasPressed;
+    private XRSimpleInteractable interactable;
+    public GameObject _miniStraddle;
 
 
     // Start is called before the first frame update
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        isPressed = false;
-
-        
+        hasPressed = false;
+        interactable = GetComponent<XRSimpleInteractable>();
+        interactable.hoverEntered.AddListener(StraddleSpawner);
 
     }
 
 
-
-    public void ShowHideMiniStraddle()
+    public void StraddleSpawner(BaseInteractionEventArgs hover)
     {
-        if(_miniStraddle.activeSelf == true)
+        if (hover.interactorObject is XRPokeInteractor)
         {
-            _miniStraddle.SetActive(false);
+                hasPressed = true;
         }
-        else
-        {
-            _miniStraddle.SetActive(true);
-        }
-        
     }
+
+    private void Update()
+    {
+        if(hasPressed)
+        {
+            hasPressed = false;
+            _miniStraddle.SetActive(!_miniStraddle.activeSelf);
+        }
+    }
+
 }
