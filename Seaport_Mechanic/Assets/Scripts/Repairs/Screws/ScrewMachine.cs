@@ -9,6 +9,7 @@ public class ScrewMachine : MonoBehaviour
 {
     public Transform visualTarget;
     public Vector3 localAxis;
+    private GameObject screwMachine;
 
     public InputActionProperty leftActivate;
     public InputActionProperty rightActivate;
@@ -27,7 +28,7 @@ public class ScrewMachine : MonoBehaviour
     {
         if(other.gameObject.tag == "ScrewDriver")
         {
-
+                screwMachine = other.gameObject;
                 attachTransform = other.transform;
                 offset = visualTarget.position - attachTransform.position;
                 isFollowing = true;
