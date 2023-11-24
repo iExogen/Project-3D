@@ -1,29 +1,38 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HammerRepair : MonoBehaviour
 {
-    public GameObject repairedObject;
-    private GameObject spawnObject;
     private int hitsOnEngine = 0;
 
-    public GameObject sparks;
+    public GameObject twistLock;
 
+    public GameObject sparks;
+    private bool needsRepair = true;
+
+    private void Start()
+    {
+        this.GetComponent<Animator>().Play("Armature | Full Twist_002");
+    }
     private void OnTriggerEnter(Collider other)
     {
+        if (!needsRepair) return;
         if(other.tag == "Hammer")
         {
+            if(hitsOnEngine <3)
+            {
+            twistLock.GetComponent<Animator>().Play("LilTwist");
             hitsOnEngine++;
+            }  
             if(hitsOnEngine == 3)
             {
-                spawnObject = Instantiate(repairedObject);
-                spawnObject.transform.position = this.transform.position;
-                spawnObject.transform.rotation = this.transform.rotation;
-                this.gameObject.SetActive(false);
+                twistLock.GetComponent<Animator>().Play("Armature | Full Twist_002");
                 GameManager.Instance.repairsDone++;
                 sparks.SetActive(false);
+                needsRepair = false;
             }
 
         }
