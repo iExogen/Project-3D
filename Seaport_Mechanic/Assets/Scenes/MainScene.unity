@@ -5020,6 +5020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 505674244}
+  - component: {fileID: 505674245}
   m_Layer: 6
   m_Name: Belt Offset
   m_TagString: Untagged
@@ -5036,13 +5037,26 @@ Transform:
   m_GameObject: {fileID: 505674243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6, z: -0.15}
+  m_LocalPosition: {x: 0, y: -0.6, z: -0.059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1248636737}
   m_Father: {fileID: 2293589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &505674245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505674243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9449b3e8f45f11f489da07c6c3e1238c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerEyeAnchor: {fileID: 1976305043}
 --- !u!1 &506394315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 651b8f6ca4013e740b08116eb1329cf3,
@@ -28015,7 +28029,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 48302adb175196b4bbbd424a08a5fd96,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 48302adb175196b4bbbd424a08a5fd96,
         type: 3}
@@ -28065,11 +28079,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48302adb175196b4bbbd424a08a5fd96,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1248636739}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48302adb175196b4bbbd424a08a5fd96, type: 3}
 --- !u!4 &1248636737 stripped
 Transform:
@@ -28077,121 +28087,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1248636736}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1248636738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 48302adb175196b4bbbd424a08a5fd96,
-    type: 3}
-  m_PrefabInstance: {fileID: 1248636736}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1248636739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248636738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackingType: 2
-  m_UpdateType: 0
-  m_IgnoreTrackingState: 0
-  m_PositionInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Position
-      m_Type: 0
-      m_ExpectedControlType: Vector3
-      m_Id: d5b780b2-bc9b-4195-bf8b-bf86d671f28e
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: c62a7b40-f4ad-4da3-8d1f-a47ec0bdd206
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 47edf454-04e5-4cfe-b1d7-08eacbc42fea
-        m_Path: <HandheldARInputDevice>/devicePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_RotationInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Rotation
-      m_Type: 0
-      m_ExpectedControlType: Quaternion
-      m_Id: cc6c6c2d-f144-4e80-84e0-4664a71a314f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 5a4b4d79-d3ab-4afc-bdab-06a40a3c418e
-        m_Path: <XRHMD>/centerEyeRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Rotation
-        m_Flags: 0
-      - m_Name: 
-        m_Id: bd414b40-ac40-4e3b-bf7d-5f8e0a4b03a4
-        m_Path: <HandheldARInputDevice>/deviceRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Rotation
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_TrackingStateInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Tracking State
-      m_Type: 0
-      m_ExpectedControlType: Integer
-      m_Id: d2faefe2-d3fc-4e62-825c-e12e79db2672
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: a5a03b9a-e819-4f8b-8bdf-18604dd46aea
-        m_Path: <XRHMD>/trackingState
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Tracking State
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PositionAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 68b9f082-1f6e-4b96-91a1-577943e565ce
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  m_RotationAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: edb0420b-243f-4c8f-89ca-72e59ea6737a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!1 &1259953775
 GameObject:
   m_ObjectHideFlags: 0
