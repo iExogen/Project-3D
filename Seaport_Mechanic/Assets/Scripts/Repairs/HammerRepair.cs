@@ -12,6 +12,7 @@ public class HammerRepair : MonoBehaviour
 
     public bool playsound = false;
 
+    public GameObject watchSphere;
     public GameObject sparks;
     private bool needsRepair = true;
 
@@ -35,6 +36,7 @@ public class HammerRepair : MonoBehaviour
                 GameManager.Instance.repairsDone++;
                 sparks.SetActive(false);
                 needsRepair = false;
+                watchSphere.SetActive(false);
             }
             playsound = true;
 

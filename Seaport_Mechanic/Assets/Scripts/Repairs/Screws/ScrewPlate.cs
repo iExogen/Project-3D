@@ -10,6 +10,8 @@ public class ScrewPlate : MonoBehaviour
     public GameObject screwPlateBrokenMovable;
     public GameObject sparks;
 
+    public GameObject WatchSphere;
+
     private bool removedPlate = false;
     private bool AddRepair = true;
     // Start is called before the first frame update
@@ -47,6 +49,7 @@ public class ScrewPlate : MonoBehaviour
         {
             AddRepair = false;
             GameManager.Instance.repairsDone++;
+            WatchSphere.SetActive(false);
             sparks.SetActive(false);
         }
     }
