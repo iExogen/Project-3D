@@ -10,10 +10,13 @@ using UnityEngine.UI;
 public class SoundEffectsRight : MonoBehaviour
 {
     public AudioSource screwDriver;
+    public AudioSource plier;
+    public AudioSource hammer;
+    public HammerRepair hammerRepairScript;
 
     public InputActionProperty rightActivate;
 
-    private bool isPickedUp = false;
+    private string itemPickedUp = "";
     private bool isUnlocked = true;
     // Start is called before the first frame update
 
@@ -25,7 +28,15 @@ public class SoundEffectsRight : MonoBehaviour
     {
         if (other.gameObject.tag == "ScrewDriver")
         {
-            isPickedUp = true;
+            itemPickedUp = "screwDriver";
+        }
+        else if (other.gameObject.CompareTag("Plier"))
+        {
+            itemPickedUp = "Plier";
+        }
+        else if (other.gameObject.CompareTag("Hammer"))
+        {
+            itemPickedUp = "Hammer";
         }
     }
 
@@ -33,22 +44,38 @@ public class SoundEffectsRight : MonoBehaviour
     {
         if (other.gameObject.tag == "ScrewDriver")
         {
-            isPickedUp = false;
+            itemPickedUp = "";
+        }
+        else if (other.gameObject.CompareTag("Plier"))
+        {
+            itemPickedUp = "";
+        }
+        else if (other.gameObject.CompareTag("Hammer"))
+        {
+            itemPickedUp = "";
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-     if (rightActivate.action.ReadValue<float>() > 0.1f && isPickedUp && isUnlocked)
+        if (rightActivate.action.ReadValue<float>() > 0.1f && itemPickedUp == "ScrewDriver" && isUnlocked)
         {
-
             isUnlocked = false;
-            screwDriver.Play();          
+            screwDriver.Play();
         }
-     else if(rightActivate.action.ReadValue<float>() < 0.1f && !isUnlocked)
+        else if (rightActivate.action.ReadValue<float>() > 0.1f && itemPickedUp == "Plier")
         {
-            isUnlocked=true;
+            plier.Play();
+        }
+        else if (hammerRepairScript.playsound && itemPickedUp == "Hammer")
+        {
+            hammer.Play();
+            hammerRepairScript.playsound = false;
+        }
+        else if (rightActivate.action.ReadValue<float>() < 0.1f && !isUnlocked)
+        {
+            isUnlocked = true;
             screwDriver.Stop();
         }
     }

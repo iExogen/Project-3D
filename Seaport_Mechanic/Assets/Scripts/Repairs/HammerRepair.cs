@@ -10,6 +10,8 @@ public class HammerRepair : MonoBehaviour
 
     public GameObject twistLock;
 
+    public bool playsound = false;
+
     public GameObject sparks;
     private bool needsRepair = true;
 
@@ -34,6 +36,7 @@ public class HammerRepair : MonoBehaviour
                 sparks.SetActive(false);
                 needsRepair = false;
             }
+            playsound = true;
 
         }
     }
