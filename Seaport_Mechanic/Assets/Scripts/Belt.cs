@@ -10,7 +10,7 @@ public class Belt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(centerEyeAnchor.transform.position.x, centerEyeAnchor.transform.position.y / 2, centerEyeAnchor.transform.position.z);
+        transform.position = new Vector3(centerEyeAnchor.transform.position.x, centerEyeAnchor.transform.position.y - .55f, centerEyeAnchor.transform.position.z-.2f); ;
 
         var rotationDifference = Mathf.Abs(centerEyeAnchor.transform.eulerAngles.y - transform.eulerAngles.y);
         var finalRotationSpeed = rotationSpeed;
