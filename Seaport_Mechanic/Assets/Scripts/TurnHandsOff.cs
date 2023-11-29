@@ -17,7 +17,7 @@ public class TurnHandsOff : MonoBehaviour
 
     private bool isPressing = false;
 
-    string[] grabbableTags = {"Hammer","ScrewDriver","Wrench","Plier" };
+    string[] grabbableTags = {"Hammer","ScrewDriver","Wrench","Plier","Helmet","Vest","Boots" };
     // Start is called before the first frame update
     void Start()
     {
