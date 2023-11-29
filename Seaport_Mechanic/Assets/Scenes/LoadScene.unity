@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 141123759}
   - component: {fileID: 141123758}
   - component: {fileID: 141123761}
+  - component: {fileID: 141123762}
   m_Layer: 6
   m_Name: Left Controller
   m_TagString: Player
@@ -748,6 +749,44 @@ MonoBehaviour:
       type: 3}
   leftHand: {fileID: 1186662473}
   rightHand: {fileID: 1818390338}
+--- !u!114 &141123762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141123754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3649c4316a243a9408d586703645c72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSelect:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Select
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6a67f370-3ebf-405a-b27d-0f26a9d232fd
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  rightSelect:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Select
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6851bb80-6d48-4753-9dde-77db99f85410
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1 &142144479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,8 +2076,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.008000001, y: 0.00067287026, z: 0.020999998}
-  m_Center: {x: 0, y: -0.000536435, z: 0}
+  m_Size: {x: 0.008000001, y: 0.0010310941, z: 0.020999998}
+  m_Center: {x: 0, y: -0.00071554707, z: 0}
 --- !u!114 &579533177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4869,6 +4908,7 @@ GameObject:
   - component: {fileID: 1349409475}
   - component: {fileID: 1349409474}
   - component: {fileID: 1349409477}
+  - component: {fileID: 1349409478}
   m_Layer: 6
   m_Name: Right Controller
   m_TagString: Player
@@ -5287,6 +5327,44 @@ MonoBehaviour:
       type: 3}
   leftHand: {fileID: 1186662473}
   rightHand: {fileID: 1818390338}
+--- !u!114 &1349409478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349409470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3649c4316a243a9408d586703645c72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSelect:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Select
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 62c43d83-0a9d-47d2-bb10-6f52b3291b25
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  rightSelect:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Select
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 48cb9081-8687-412a-9712-f29ea624728f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1001 &1381382364
 PrefabInstance:
   m_ObjectHideFlags: 0
