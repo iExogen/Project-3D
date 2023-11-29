@@ -28,7 +28,7 @@ public class SoundEffectsRight : MonoBehaviour
     {
         if (other.gameObject.tag == "ScrewDriver")
         {
-            itemPickedUp = "screwDriver";
+            itemPickedUp = "ScrewDriver";
         }
         else if (other.gameObject.CompareTag("Plier"))
         {
