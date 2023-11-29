@@ -11,6 +11,8 @@ public class EquipGear : MonoBehaviour
         if(equipment.Contains(other.tag) && this.CompareTag(other.tag))
         {
             other.gameObject.SetActive(false);
+            other.transform.parent.gameObject.SetActive(false);
+            this.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }
