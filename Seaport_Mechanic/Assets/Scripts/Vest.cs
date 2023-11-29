@@ -9,7 +9,7 @@ public class Vest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(centerEyeAnchor.transform.position.x, centerEyeAnchor.transform.position.y, centerEyeAnchor.transform.position.z); ;
+        transform.position = new Vector3(centerEyeAnchor.transform.position.x - 0.09079692f, 1.3f, centerEyeAnchor.transform.position.z+ 0.02432949f); ;
 
         var rotationDifference = Mathf.Abs(centerEyeAnchor.transform.eulerAngles.y - transform.eulerAngles.y);
         var finalRotationSpeed = rotationSpeed;
