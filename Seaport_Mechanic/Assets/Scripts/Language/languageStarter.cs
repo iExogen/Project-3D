@@ -16,20 +16,34 @@ public class languageStarter : MonoBehaviour
     }
     public Collider UkArican;
     public Collider Belgerland;
+
+    public GameObject UkaricanIndicator;
+    private Transform ukaricanStartPos;
+    public GameObject BelgerlandIndicator;
+    private Transform BelgerlandStartPos;
     // Start is called before the first frame update
     void Start()
     {
+        ukaricanStartPos = UkaricanIndicator.transform;
+        BelgerlandStartPos = BelgerlandIndicator.transform;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Crayon"))
         {
-            UkArican.transform.gameObject.SetActive(false);
+            if (collision.GetContact(0).thisCollider == UkArican)
+            {
+                LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+                BelgerlandIndicator.transform.position = BelgerlandStartPos.position;
+                UkaricanIndicator.transform.position += new Vector3(0, 0, 0.0013f);
+            }
+            else if(collision.GetContact(0).thisCollider == Belgerland)
+            {
+                LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
+                UkaricanIndicator.transform.position = ukaricanStartPos.position;
+                BelgerlandIndicator.transform.position += new Vector3(0, 0, 0.0013f);
+            }
         }
-    }
-    void Update()
-    {
-        
     }
 }
