@@ -1,33 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TurnHandsOff : MonoBehaviour
 {
     public InputActionProperty leftGrab;
     public InputActionProperty rightGrab;
 
-
     public GameObject leftHand;
     public GameObject rightHand;
-    private bool isGrabbable = false;
 
-    private bool isPressing = false;
-
+    private bool hasPickedUp = false;
+    private bool isInteracting = false;
     string[] grabbableTags = {"Hammer","ScrewDriver","Wrench","Plier","Helmet","Vest","Boots" };
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool resetClick;
 
+    private void Start()
+    {
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(grabbableTags.Contains(other.tag))
         {
-            isGrabbable = true;
+            isInteracting = true;
         }
     }
 
@@ -35,25 +34,48 @@ public class TurnHandsOff : MonoBehaviour
     {
         if (grabbableTags.Contains(other.tag))
         {
-            isGrabbable = false;
+
+            isInteracting = false;
         }
     }
+
     // Update is called once per frame
     void Update()
     {
-        if(leftGrab.action.ReadValue<float>() >0.1f && isGrabbable && !isPressing)
+        PickUp();
+    }
+
+    void PickUp()
+    {
+        if (leftGrab.action.ReadValue<float>() > 0.1f  && !hasPickedUp && isInteracting && resetClick)
         {
-            leftHand.SetActive(!leftHand.activeSelf);
-            isPressing = true;
+            leftHand.SetActive(false);
+            hasPickedUp = true;
+            resetClick = false;
         }
-        else if (rightGrab.action.ReadValue<float>() > 0.1f && isGrabbable && !isPressing)
+        else if (rightGrab.action.ReadValue<float>() > 0.1f && !hasPickedUp && isInteracting && resetClick)
         {
-            rightHand.SetActive(!rightHand.activeSelf );
-            isPressing = true;
+            rightHand.SetActive(false);
+            hasPickedUp = true;
+            resetClick = false;
         }
-        if(leftGrab.action.ReadValue<float>() <0.1f && rightGrab.action.ReadValue<float>() < 0.1f)
+        else if(rightGrab.action.ReadValue<float>()>0.1f && hasPickedUp && isInteracting && resetClick)
         {
-            isPressing = false;
+            rightHand.SetActive(true);
+            hasPickedUp=false;
+            resetClick = false;
+        }
+        else if(leftGrab.action.ReadValue<float>()>0.1f && hasPickedUp && isInteracting && resetClick)
+        {
+            leftHand.SetActive(true);
+            hasPickedUp = false;
+            resetClick = false;
+        }
+
+        if(leftGrab.action.ReadValue<float>()<0.1f && rightGrab.action.ReadValue<float>()<0.1f)
+        {
+            resetClick = true;
         }
     }
+
 }

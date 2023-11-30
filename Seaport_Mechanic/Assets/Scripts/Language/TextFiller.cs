@@ -33,6 +33,8 @@ public class TextFiller : MonoBehaviour
     public TMP_Text startButton;
     public TMP_Text endButton;
 
+    private bool botsWorking;
+
     void Start()
     {
         timer = Time.time;
@@ -58,7 +60,8 @@ public class TextFiller : MonoBehaviour
     {
 
             PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + GameManager.Instance.repairsDone;
-            if (Time.time > timer+timeBetweenNPCScore * (npcScore + 1))
+        if (!botsWorking) return;
+        if (Time.time > timer+timeBetweenNPCScore * (npcScore + 1))
             {
                 npcScore++;
                 playerSlider.value = GameManager.Instance.repairsDone * 0.2f;
@@ -80,9 +83,10 @@ public class TextFiller : MonoBehaviour
                     NPC5Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreDone);
                     NPC6Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreDone);
                     GameManager.Instance.finishPlace += 5;
+                botsWorking = false;
                 }
             }
-            if (GameManager.Instance.repairsDone == 2)
+            if (GameManager.Instance.repairsDone == GameManager.Instance.totalRepairs)
             {
                 PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreDone);
             }
