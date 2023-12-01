@@ -7,10 +7,12 @@ public class Belt : MonoBehaviour
 {
     public GameObject centerEyeAnchor;
     private float rotationSpeed = 100;
+    public GameObject characterCenter;
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(centerEyeAnchor.transform.position.x, centerEyeAnchor.transform.position.y - .55f, centerEyeAnchor.transform.position.z-.2f); ;
+        transform.position = characterCenter.transform.position +centerEyeAnchor.transform.forward*.5f+ new Vector3(0,1,0);
+     
 
         var rotationDifference = Mathf.Abs(centerEyeAnchor.transform.eulerAngles.y - transform.eulerAngles.y);
         var finalRotationSpeed = rotationSpeed;

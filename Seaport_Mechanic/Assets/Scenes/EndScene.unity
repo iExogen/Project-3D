@@ -1413,11 +1413,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 296599940185916771, guid: 263d71e7d57d25a4abcf9f217b39fd00, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 356897467198596346, guid: 263d71e7d57d25a4abcf9f217b39fd00,
+        type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 364865886}
   m_SourcePrefab: {fileID: 100100000, guid: 263d71e7d57d25a4abcf9f217b39fd00, type: 3}
+--- !u!1 &364865884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 356897467198596346, guid: 263d71e7d57d25a4abcf9f217b39fd00,
+    type: 3}
+  m_PrefabInstance: {fileID: 364865883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &364865885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8479247560790033049, guid: 263d71e7d57d25a4abcf9f217b39fd00,
+    type: 3}
+  m_PrefabInstance: {fileID: 364865883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364865884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &364865886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364865884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17d1c462d5f2aa43aca2e6263e5a31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 364865884}
+  head: {fileID: 1141582994}
+  menuButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Menu Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c31d4248-8b25-46f0-92b8-e4a4353febe7
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  interactable: {fileID: 364865885}
 --- !u!1001 &394979342
 PrefabInstance:
   m_ObjectHideFlags: 0
