@@ -1809,6 +1809,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &276629395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+    type: 3}
+  m_PrefabInstance: {fileID: 781654357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &290776080
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,6 +5392,7 @@ Transform:
   - {fileID: 1156659577}
   - {fileID: 769220379}
   - {fileID: 742649824}
+  - {fileID: 276629395}
   m_Father: {fileID: 2293589}
   m_LocalEulerAnglesHint: {x: 1.756, y: 359.984, z: -1.014}
 --- !u!114 &503404994
@@ -8180,7 +8187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8188,7 +8195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8422,7 +8429,7 @@ Transform:
   m_GameObject: {fileID: 742649823}
   serializedVersion: 2
   m_LocalRotation: {x: 0.015326705, y: -0.0000033676624, z: -0.008848814, w: -0.9998434}
-  m_LocalPosition: {x: -0.006297724, y: 0.0054407874, z: -0.0016692029}
+  m_LocalPosition: {x: 0.02, y: 0.0024, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8950,6 +8957,94 @@ MonoBehaviour:
   m_UIHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &781654357
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 503404993}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0044
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2064
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.17825775
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.69370097
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6941204
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.072111435
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.465
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 200.569
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 88.427
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4420c23cd1421f5428a6db275e32972b,
+        type: 3}
+      propertyPath: m_Name
+      value: Inventory Hex
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4420c23cd1421f5428a6db275e32972b, type: 3}
 --- !u!1 &785198788
 GameObject:
   m_ObjectHideFlags: 0
@@ -28549,7 +28644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: ca20b3907ff1c794cb89c1ad2cce8282, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: ca20b3907ff1c794cb89c1ad2cce8282, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28557,7 +28652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: ca20b3907ff1c794cb89c1ad2cce8282, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: ca20b3907ff1c794cb89c1ad2cce8282, type: 3}
       propertyPath: m_LocalRotation.w
