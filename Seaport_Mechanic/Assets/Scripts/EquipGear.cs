@@ -2,17 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EquipGear : MonoBehaviour
 {
-    string[] equipment = { "Helmet","Boots","Vest" };
+    private float wait5seconds = 0;
+    private bool isHolding = false;
+    public GameObject vest;
+    public GameObject helmet;
+    public GameObject boots;
     private void OnTriggerEnter(Collider other)
     {
-        if(equipment.Contains(other.tag) && this.CompareTag(other.tag))
+        if(other.CompareTag("Player"))
         {
-            other.transform.root.gameObject.SetActive(false);
-            other.gameObject.SetActive(false);
-            this.transform.GetChild(0).gameObject.SetActive(true);
+            isHolding = true;
+            wait5seconds = Time.time;
+            
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("player"))
+        {
+            isHolding = false;
+        }
+    }
+    private void Update()
+    {
+        if (wait5seconds <= Time.time-5f && isHolding)
+        {
+            GameManager.Instance.equipedItems++;
+            this.gameObject.SetActive(false);
+            switch (this.tag)
+            {
+                case "Helmet":
+                    helmet.SetActive(true);
+                    break;
+                case "Vest":
+                    vest.SetActive(true);
+                    break;
+                case "Boots":
+                    boots.SetActive(true);
+                    break;
+            }
         }
     }
 }

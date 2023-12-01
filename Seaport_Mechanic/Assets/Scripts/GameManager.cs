@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     public int screwsRemoved = 0;
     public int screwsFixed = 0;
     public int finishPlace = 1;
+    public int equipedItems=0;
     private void Start()
     {
     }

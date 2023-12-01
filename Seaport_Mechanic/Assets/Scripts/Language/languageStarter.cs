@@ -17,6 +17,8 @@ public class languageStarter : MonoBehaviour
     public Collider UkArican;
     public Collider Belgerland;
 
+    public AudioSource chalk;
+
     public GameObject UkaricanIndicator;
     private Transform ukaricanStartPos;
     public GameObject BelgerlandIndicator;
@@ -37,12 +39,14 @@ public class languageStarter : MonoBehaviour
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
                 BelgerlandIndicator.transform.position = BelgerlandStartPos.position;
                 UkaricanIndicator.transform.position += new Vector3(0, 0, 0.0013f);
+                chalk.Play();
             }
             else if(collision.GetContact(0).thisCollider == Belgerland)
             {
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
                 UkaricanIndicator.transform.position = ukaricanStartPos.position;
                 BelgerlandIndicator.transform.position += new Vector3(0, 0, 0.0013f);
+                chalk.Play();
             }
         }
     }
