@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.UI.BodyUI;
 
@@ -12,11 +13,20 @@ public class SummonInventory : MonoBehaviour
     public GameObject wrenchSocket;
     public GameObject parentSocket;
 
+    public GameObject hammer;
+    public GameObject powertool;
+    public GameObject cutter;
+    public GameObject torch;
+    public GameObject wrench;
+    public GameObject emptySlot;
+
     private Vector3 hammerStartpos;
     private Vector3 powerStartpos;
     private Vector3 cutterStartPos;
     private Vector3 torchStartPos;
     private Vector3 wrenchStartPos;
+
+    public GameObject mainCamera;
 
     private GameObject currentSlot = null;
     // Start is called before the first frame update
@@ -27,67 +37,105 @@ public class SummonInventory : MonoBehaviour
         cutterStartPos = cutterSocket.transform.position;
         torchStartPos = torchSocket.transform.position;
         wrenchStartPos = wrenchSocket.transform.position;
-        currentSlot = hammerSocket;
+        currentSlot = emptySlot;
     }
+
     private void OnCollisionEnter(Collision collision)
     {
+        //check if object is a handbutton
         if (collision.gameObject.layer != 11) return;
         currentSlot.transform.SetParent(parentSocket.transform);
         currentSlot.transform.rotation = Quaternion.Euler(0, 0, 0);
+        //moving previous slot
         if(currentSlot == hammerSocket)
         {
             currentSlot.transform.position = hammerStartpos;
+            hammer.transform.position = hammerStartpos + new Vector3(0,2,0);
         }
         else if(currentSlot == powerSocket)
         {
             currentSlot.transform.position = powerStartpos;
+            powertool.transform.position = powerStartpos + new Vector3(0, 2, 0);
         }
         else if(currentSlot == cutterSocket)
         {
             currentSlot.transform.position = cutterStartPos;
+            cutter.transform.position = cutterStartPos + new Vector3(0, 2, 0);
         }
         else if (currentSlot == torchSocket)
         {
             currentSlot.transform.position = torchStartPos;
+            torch.transform.position = torchStartPos + new Vector3(0, 2, 0);
         }
         else if (currentSlot == wrenchSocket)
         {
             currentSlot.transform.position = wrenchStartPos;
+            wrench.transform.position = wrenchStartPos + new Vector3(0, 2, 0);
         }
+        //moving new slot
         switch (collision.GetContact(0).thisCollider.name)
         {
             case "HammerButton":
                 currentSlot = hammerSocket;
-                hammerSocket.transform.position = this.gameObject.transform.position;
-                hammerSocket.transform.rotation = this.gameObject.transform.rotation;
-                hammerSocket.transform.SetParent(this.gameObject.transform);
                 break;
             case "PowerToolButton":
                 currentSlot = powerSocket;
-                powerSocket.transform.position = this.gameObject.transform.position;
-                powerSocket.transform.rotation = this.gameObject.transform.rotation;
-                powerSocket.transform.SetParent(this.gameObject.transform);
                 break;
             case "CutterButton":
                 currentSlot = cutterSocket;
-                cutterSocket.transform.position = this.gameObject.transform.position;
-                cutterSocket.transform.rotation = this.gameObject.transform.rotation;
-                cutterSocket.transform.SetParent(this.gameObject.transform);
                 break;
             case "TorchButton":
                 currentSlot = torchSocket;
-                torchSocket.transform.position = this.gameObject.transform.position;
-                torchSocket.transform.rotation = this.gameObject.transform.rotation;
-                torchSocket.transform.SetParent(this.gameObject.transform);
                 break;
             case "WrenchButton":
                 currentSlot = wrenchSocket;
-                wrenchSocket.transform.position = this.gameObject.transform.position;
-                wrenchSocket.transform.rotation = this.gameObject.transform.rotation;
-                wrenchSocket.transform.SetParent(this.gameObject.transform);
                 break;
                 default:
                 break;
         }
+        currentSlot.transform.position = this.gameObject.transform.position;
+        currentSlot.transform.rotation = this.gameObject.transform.rotation;
+        currentSlot.transform.SetParent(this.gameObject.transform);
     }
+
+    private void Update()
+    {
+        //make sure items return to slot when too far away
+        if(currentSlot == hammerSocket)
+        {
+            if(Vector3.Distance(hammer.transform.position,mainCamera.transform.position)>2f)
+            {
+                hammer.transform.position = hammerSocket.transform.position + new Vector3(0,2,0);
+            }
+        }
+        else if (currentSlot == powerSocket)
+        {
+            if (Vector3.Distance(powertool.transform.position, mainCamera.transform.position) > 2f)
+            {
+                powertool.transform.position = powerSocket.transform.position + new Vector3(0, 2, 0);
+            }
+        }
+        else if (currentSlot == cutterSocket)
+        {
+            if (Vector3.Distance(cutter.transform.position, mainCamera.transform.position) > 2f)
+            {
+                cutter.transform.position = cutterSocket.transform.position + new Vector3(0, 2, 0);
+            }
+        }
+        else if (currentSlot == torchSocket)
+        {
+            if (Vector3.Distance(hammer.transform.position, mainCamera.transform.position) > 2f)
+            {
+                torch.transform.position = torchSocket.transform.position + new Vector3(0, 2, 0);
+            }
+        }
+        else if (currentSlot == wrenchSocket)
+        {
+            if (Vector3.Distance(hammer.transform.position, mainCamera.transform.position) > 2f)
+            {
+                wrench.transform.position = wrenchSocket.transform.position + new Vector3(0, 2, 0);
+            }
+        }
+    }
+
 }

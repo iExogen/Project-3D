@@ -4159,6 +4159,7 @@ Transform:
   - {fileID: 2143840599}
   - {fileID: 1623998765}
   - {fileID: 247006343}
+  - {fileID: 1810678892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &469547682
@@ -15772,6 +15773,13 @@ MonoBehaviour:
   torchSocket: {fileID: 1623998762}
   wrenchSocket: {fileID: 247006340}
   parentSocket: {fileID: 464087200}
+  hammer: {fileID: 845313893}
+  powertool: {fileID: 867442630}
+  cutter: {fileID: 1060448258}
+  torch: {fileID: 1117093228}
+  wrench: {fileID: 1564413968}
+  emptySlot: {fileID: 1810678891}
+  mainCamera: {fileID: 1976305043}
 --- !u!54 &877507425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64598,6 +64606,37 @@ Transform:
   - {fileID: 463576019}
   - {fileID: 523888175}
   m_Father: {fileID: 8687522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1810678891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1810678892}
+  m_Layer: 0
+  m_Name: EmptySlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1810678892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810678891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.709, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 464087201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1824017540
 GameObject:
