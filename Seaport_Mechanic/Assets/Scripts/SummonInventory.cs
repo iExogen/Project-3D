@@ -50,27 +50,42 @@ public class SummonInventory : MonoBehaviour
         if(currentSlot == hammerSocket)
         {
             currentSlot.transform.position = hammerStartpos;
-            hammer.transform.position = hammerStartpos + new Vector3(0,2,0);
+            if(Vector3.Distance(hammer.transform.position,currentSlot.transform.position) >2f)
+            {
+                hammer.transform.position = hammerStartpos + new Vector3(0, 2, 0);
+            }
         }
         else if(currentSlot == powerSocket)
         {
             currentSlot.transform.position = powerStartpos;
-            powertool.transform.position = powerStartpos + new Vector3(0, 2, 0);
+            if (Vector3.Distance(powertool.transform.position, currentSlot.transform.position) > 2f)
+            {
+                powertool.transform.position = powerStartpos + new Vector3(0, 2, 0);
+            }
         }
         else if(currentSlot == cutterSocket)
         {
             currentSlot.transform.position = cutterStartPos;
-            cutter.transform.position = cutterStartPos + new Vector3(0, 2, 0);
+            if (Vector3.Distance(cutterSocket.transform.position, currentSlot.transform.position) > 2f)
+            {
+                cutter.transform.position = cutterStartPos + new Vector3(0, 2, 0);
+            }
         }
         else if (currentSlot == torchSocket)
         {
             currentSlot.transform.position = torchStartPos;
-            torch.transform.position = torchStartPos + new Vector3(0, 2, 0);
+            if (Vector3.Distance(torch.transform.position, currentSlot.transform.position) > 2f)
+            {
+                torch.transform.position = torchStartPos + new Vector3(0, 2, 0);
+            }
         }
         else if (currentSlot == wrenchSocket)
         {
             currentSlot.transform.position = wrenchStartPos;
-            wrench.transform.position = wrenchStartPos + new Vector3(0, 2, 0);
+            if (Vector3.Distance(wrench.transform.position, currentSlot.transform.position) > 2f)
+            {
+                wrench.transform.position = wrenchStartPos + new Vector3(0, 2, 0);
+            }
         }
         //moving new slot
         switch (collision.GetContact(0).thisCollider.name)
