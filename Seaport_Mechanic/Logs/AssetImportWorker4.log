@@ -1,0 +1,501 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.10f1 (ff3792e53c62) revision 16725906'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 16321 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\2022.3.10f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+F:/School/Git/Project-3D/Seaport_Mechanic
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+60099
+Successfully changed project path to: F:/School/Git/Project-3D/Seaport_Mechanic
+F:/School/Git/Project-3D/Seaport_Mechanic
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [16312] Host "[IP] 192.168.0.105 [Port] 0 [Flags] 2 [Guid] 491034711 [EditorId] 491034711 [Version] 1048832 [Id] WindowsEditor(7,Glimfey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [16312] Host "[IP] 192.168.0.105 [Port] 0 [Flags] 2 [Guid] 491034711 [EditorId] 491034711 [Version] 1048832 [Id] WindowsEditor(7,Glimfey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 33.22 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.00 ms.
+Initialize engine version: 2022.3.10f1 (ff3792e53c62)
+[Subsystems] Discovering subsystems at path D:/Unity/2022.3.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/School/Git/Project-3D/Seaport_Mechanic/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2487)
+    Vendor:   NVIDIA
+    VRAM:     12124 MB
+    Driver:   31.0.15.4617
+Initialize mono
+Mono path[0] = 'D:/Unity/2022.3.10f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2022.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Unity/2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006115 seconds.
+- Loaded All Assemblies, in  0.430 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 411 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.813 seconds
+Domain Reload Profiling: 1243ms
+	BeginReloadAssembly (145ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (171ms)
+		LoadAssemblies (145ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (168ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (149ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (813ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (742ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (562ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (115ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.939 seconds
+Refreshing native plugins compatible for Editor in 17.92 ms, found 13 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <787acc3c9a4c471ba7d971300105af24>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <787acc3c9a4c471ba7d971300105af24>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <787acc3c9a4c471ba7d971300105af24>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <fe7039efe678478d9c83e73bc6a6566d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mirror | mirror-networking.com | discord.gg/N9QVxbM
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Mirror.Welcome:OnInitializeOnLoad () (at Assets/Mirror/Editor/Welcome.cs:18)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+(Filename: Assets/Mirror/Editor/Welcome.cs Line: 18)
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.071 seconds
+Domain Reload Profiling: 2010ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (622ms)
+		LoadAssemblies (412ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (340ms)
+			TypeCache.Refresh (272ms)
+				TypeCache.ScanAssembly (246ms)
+			ScanForSourceGeneratedMonoScriptInfo (46ms)
+			ResolveRequiredComponents (21ms)
+	FinalizeReload (1072ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (764ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (487ms)
+			ProcessInitializeOnLoadMethodAttributes (144ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 21.25 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 6692 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 132 unused Assets / (1.6 MB). Loaded Objects now: 7148.
+Memory consumption went from 265.1 MB to 263.5 MB.
+Total: 6.455300 ms (FindLiveObjects: 0.805200 ms CreateObjectMapping: 0.941100 ms MarkObjects: 4.104800 ms  DeleteObjects: 0.602500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 942713.189768 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 2 High/Block 2 High.mat
+  artifactKey: Guid(0273767665791474db3f51faa61c340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 2 High/Block 2 High.mat using Guid(0273767665791474db3f51faa61c340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb6a0f6596b7383ebf03f20ef6d0b724') in 0.336472 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 18.979303 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 2 High/Block 1_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(e43a8a6ec460fd44bb50086b2ada7a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 2 High/Block 1_Bake1_PBR StoA_Normal.png using Guid(e43a8a6ec460fd44bb50086b2ada7a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828bc97fb7d8c8223deff1594db0b84b') in 0.034098 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 8.548520 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High
+  artifactKey: Guid(de76cd0220b54a548a7ee46880da1bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High using Guid(de76cd0220b54a548a7ee46880da1bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e9484e96d13c4e27c4f711130ab41b9') in 0.000546 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(e7fa0bb46753266449e73ce63d2858bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High_Bake1_PBR StoA_Normal.png using Guid(e7fa0bb46753266449e73ce63d2858bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e2b921183c6ee1c6d06d653658b8d2e') in 0.017957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High_Bake1_PBR StoA_Glossiness.png
+  artifactKey: Guid(2287f1491c2e59b49a26cfc28c1de745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High_Bake1_PBR StoA_Glossiness.png using Guid(2287f1491c2e59b49a26cfc28c1de745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c19584a8928d36635e8a4994988cfe7') in 0.019422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.119716 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 1 High.mat
+  artifactKey: Guid(e7b821d440e545a47a68845759de4e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 1 High.mat using Guid(e7b821d440e545a47a68845759de4e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53535c090c6c590da072a1ca08a3811e') in 0.023637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 5.443789 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High.mat
+  artifactKey: Guid(e7b821d440e545a47a68845759de4e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High.mat using Guid(e7b821d440e545a47a68845759de4e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c9bfeaec3167a9e97047953a9581aa') in 0.020719 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 14.292630 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(e7fa0bb46753266449e73ce63d2858bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High_Bake1_PBR StoA_Normal.png using Guid(e7fa0bb46753266449e73ce63d2858bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa26d595a02b0028ee7c9514255199a') in 0.021351 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.097419 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High.mat
+  artifactKey: Guid(e7b821d440e545a47a68845759de4e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 3 High/Block 3 High.mat using Guid(e7b821d440e545a47a68845759de4e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc98f5d83d211c65364c5c5a45854eb') in 0.023326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 3.531178 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High
+  artifactKey: Guid(9979fc0706af47e41a4228569fbc9c32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High using Guid(9979fc0706af47e41a4228569fbc9c32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3bf4db07e98541aa244f66902c39642') in 0.000618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.025809 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High_Bake1_PBR StoA_Alpha.png
+  artifactKey: Guid(8e4859ba932a5374598652311608ff3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High_Bake1_PBR StoA_Alpha.png using Guid(8e4859ba932a5374598652311608ff3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '470e05f57242bcc8a8174ff3ffd47308') in 0.021314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High_Bake1_PBR StoA_Metalness.png
+  artifactKey: Guid(14e434c6d1d7a834286a81836838c1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High_Bake1_PBR StoA_Metalness.png using Guid(14e434c6d1d7a834286a81836838c1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3396affdaf556af94554b3b134764aff') in 0.018303 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.060167 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 1 High.mat
+  artifactKey: Guid(d5730a38faa9d904c8733cc6a0c350a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 1 High.mat using Guid(d5730a38faa9d904c8733cc6a0c350a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb475cdc78ef4d70863ab1ed130d1e83') in 0.019619 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 4.779303 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High.mat
+  artifactKey: Guid(d5730a38faa9d904c8733cc6a0c350a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High.mat using Guid(d5730a38faa9d904c8733cc6a0c350a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1bec229edeb37ef30cddfb3772c64e') in 0.023053 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 10.999854 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(ad796e87f2ac1414aa736bb98733738b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High_Bake1_PBR StoA_Normal.png using Guid(ad796e87f2ac1414aa736bb98733738b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aff340344b40356faf99c78c45b7c483') in 0.021909 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.949619 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High.mat
+  artifactKey: Guid(d5730a38faa9d904c8733cc6a0c350a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 4 High/Block 4 High.mat using Guid(d5730a38faa9d904c8733cc6a0c350a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0243fbcaec9b3b3f9a91c53009f6ac') in 0.023732 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 7.545271 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side
+  artifactKey: Guid(c667d00136f9a0d4caa82029751ef045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side using Guid(c667d00136f9a0d4caa82029751ef045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01bb2d5f2223c2f97b056ff2f154e590') in 0.000811 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Fake Back Side_Bake1_PBR StoA_Metalness.png
+  artifactKey: Guid(cbc428e198499204297e4e60cc8a6348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Fake Back Side_Bake1_PBR StoA_Metalness.png using Guid(cbc428e198499204297e4e60cc8a6348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d54dac2f0e67808b7c39ad6a889355b') in 0.167470 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.988204 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Block 1 High.mat
+  artifactKey: Guid(faa8d5e75e24edc4ebfcdca8a6bc2255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Block 1 High.mat using Guid(faa8d5e75e24edc4ebfcdca8a6bc2255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4369694b64533a27628bb3c39a4152e') in 0.024750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 8.452132 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Back Side.mat
+  artifactKey: Guid(faa8d5e75e24edc4ebfcdca8a6bc2255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Back Side.mat using Guid(faa8d5e75e24edc4ebfcdca8a6bc2255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16581ef7dfe2bd2302f420b21eb50046') in 0.021290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 9.673528 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Fake Back Side_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(18db30479c1197c47b781f2849407b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Fake Back Side_Bake1_PBR StoA_Normal.png using Guid(18db30479c1197c47b781f2849407b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e3b8a8e4c5378f7c06ef5a3219c4543') in 0.020869 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.569476 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Back Side.mat
+  artifactKey: Guid(faa8d5e75e24edc4ebfcdca8a6bc2255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Fake Back Side/Back Side.mat using Guid(faa8d5e75e24edc4ebfcdca8a6bc2255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25958f9c253a0624cd9922664f4bedcc') in 0.024495 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 5.520583 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Side Wall
+  artifactKey: Guid(f77f2aacc1e36a64b9b35dd2b7fafdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Side Wall using Guid(f77f2aacc1e36a64b9b35dd2b7fafdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cbfc7472719a2560c252a5e47e36c9c') in 0.000629 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(1be70ed23dc8f8b40bf83fe70e6dce96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall_Bake1_PBR StoA_Normal.png using Guid(1be70ed23dc8f8b40bf83fe70e6dce96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04666cabdd43c6e134a7e85da20902e') in 0.021216 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.018584 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Block 1 High.mat
+  artifactKey: Guid(0537078d590b0874a8171306efcced4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Block 1 High.mat using Guid(0537078d590b0874a8171306efcced4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d0f526342550cb474d5fbe122dfd1e') in 0.020750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 6.458568 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall.mat
+  artifactKey: Guid(0537078d590b0874a8171306efcced4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall.mat using Guid(0537078d590b0874a8171306efcced4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed28803960d7c6c6b902c8e03afa69b') in 0.025116 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 8.756368 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall_Bake1_PBR StoA_Normal.png
+  artifactKey: Guid(1be70ed23dc8f8b40bf83fe70e6dce96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall_Bake1_PBR StoA_Normal.png using Guid(1be70ed23dc8f8b40bf83fe70e6dce96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27decf19d0cd47e762e2c29c8f8b28f4') in 0.019124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 6.312180 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall.mat
+  artifactKey: Guid(0537078d590b0874a8171306efcced4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Side Wall/Side Wall.mat using Guid(0537078d590b0874a8171306efcced4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a90cdda8be4c41bf15a7fb5c4d9f06c') in 0.020702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 45.058291 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 2 High/Block 2 High.mat
+  artifactKey: Guid(0273767665791474db3f51faa61c340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 2 High/Block 2 High.mat using Guid(0273767665791474db3f51faa61c340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b687d0bba24875d0ea02702e6144bc4') in 0.021081 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 16.319408 seconds.
+  path: Assets/Objects/Map/Map2/Outside/New outside.fbx
+  artifactKey: Guid(252a61c50a2759b47b2322ae06366d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/New outside.fbx using Guid(252a61c50a2759b47b2322ae06366d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a43c60b49b66908c37c3e2d82634261') in 0.104297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 348.036514 seconds.
+  path: Assets/Objects/Map/Map2/20231024_095340_336.jpg
+  artifactKey: Guid(df1e90ff0093f2648bb68f25381f9994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/20231024_095340_336.jpg using Guid(df1e90ff0093f2648bb68f25381f9994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8561abc8661b22d707665f761be239f') in 0.068620 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Objects/Map/Map2/workshop_2k.hdr
+  artifactKey: Guid(688db594be7fa1e439ad47d497ba0589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/workshop_2k.hdr using Guid(688db594be7fa1e439ad47d497ba0589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2fbbbb94c2068eaff7c668458aa0a9e') in 0.045705 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 39.010778 seconds.
+  path: Assets/Objects/Map/Map2/Workplace.mat
+  artifactKey: Guid(6d6d4e9a400381f46a7d9f6706e0e45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Workplace.mat using Guid(6d6d4e9a400381f46a7d9f6706e0e45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c1319e31e8d54c8880bf98d627677d') in 0.023018 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 8.586938 seconds.
+  path: Assets/Objects/Map/Map2/Skybox clouds.mat
+  artifactKey: Guid(9dc6f5e28c089ac4e98b5701437eabe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Skybox clouds.mat using Guid(9dc6f5e28c089ac4e98b5701437eabe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '715c819a81a5c1948d328f758350ed27') in 0.017310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 57.296756 seconds.
+  path: Assets/Objects/Map/Map2/Skybox clouds.mat
+  artifactKey: Guid(9dc6f5e28c089ac4e98b5701437eabe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Skybox clouds.mat using Guid(9dc6f5e28c089ac4e98b5701437eabe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dcb11c325ac1f2bc48da8d5835978fc') in 0.022372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3

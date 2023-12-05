@@ -15,7 +15,7 @@ F:/School/Git/Project-3D/Seaport_Mechanic
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-64009
+60099
 Successfully changed project path to: F:/School/Git/Project-3D/Seaport_Mechanic
 F:/School/Git/Project-3D/Seaport_Mechanic
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,13 +49,13 @@ F:/School/Git/Project-3D/Seaport_Mechanic
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [39076] Host "[IP] 192.168.0.105 [Port] 0 [Flags] 2 [Guid] 2263710564 [EditorId] 2263710564 [Version] 1048832 [Id] WindowsEditor(7,Glimfey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [45932] Host "[IP] 192.168.0.105 [Port] 0 [Flags] 2 [Guid] 1729153794 [EditorId] 1729153794 [Version] 1048832 [Id] WindowsEditor(7,Glimfey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [39076] Host "[IP] 192.168.0.105 [Port] 0 [Flags] 2 [Guid] 2263710564 [EditorId] 2263710564 [Version] 1048832 [Id] WindowsEditor(7,Glimfey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [45932] Host "[IP] 192.168.0.105 [Port] 0 [Flags] 2 [Guid] 1729153794 [EditorId] 1729153794 [Version] 1048832 [Id] WindowsEditor(7,Glimfey) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Refreshing native plugins compatible for Editor in 100.58 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 2.20 ms.
+Refreshing native plugins compatible for Editor in 3464.85 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.96 ms.
 Initialize engine version: 2022.3.10f1 (ff3792e53c62)
 [Subsystems] Discovering subsystems at path D:/Unity/2022.3.10f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path F:/School/Git/Project-3D/Seaport_Mechanic/Assets
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2022.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2022.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Unity/2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.041787 seconds.
-- Loaded All Assemblies, in  1.639 seconds
+Registered in 0.369473 seconds.
+- Loaded All Assemblies, in  9.863 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 621 ms
+Android Extension - Scanning For ADB Devices 1052 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.137 seconds
-Domain Reload Profiling: 2776ms
-	BeginReloadAssembly (1180ms)
+- Finished resetting the current domain, in  2.136 seconds
+Domain Reload Profiling: 11997ms
+	BeginReloadAssembly (6416ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (65ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (106ms)
-	LoadAllAssembliesAndSetupDomain (269ms)
-		LoadAssemblies (1181ms)
+	RebuildCommonClasses (473ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (430ms)
+	LoadAllAssembliesAndSetupDomain (2527ms)
+		LoadAssemblies (6417ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (265ms)
-			TypeCache.Refresh (263ms)
-				TypeCache.ScanAssembly (235ms)
+		AnalyzeDomain (2523ms)
+			TypeCache.Refresh (2517ms)
+				TypeCache.ScanAssembly (1590ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1138ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (2136ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1059ms)
+		SetupLoadedEditorAssemblies (1922ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (831ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (1635ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (141ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
+			ProcessInitializeOnLoadAttributes (173ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,8 +118,8 @@ Domain Reload Profiling: 2776ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.655 seconds
-Refreshing native plugins compatible for Editor in 17.88 ms, found 13 plugins.
+- Loaded All Assemblies, in 13.801 seconds
+Refreshing native plugins compatible for Editor in 23.10 ms, found 13 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Package Manager log level set to [2]
@@ -163,47 +163,47 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.339 seconds
-Domain Reload Profiling: 2992ms
-	BeginReloadAssembly (260ms)
+- Finished resetting the current domain, in  1.713 seconds
+Domain Reload Profiling: 15513ms
+	BeginReloadAssembly (271ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (64ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (1254ms)
-		LoadAssemblies (1030ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (13373ms)
+		LoadAssemblies (12565ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (395ms)
-			TypeCache.Refresh (313ms)
-				TypeCache.ScanAssembly (278ms)
-			ScanForSourceGeneratedMonoScriptInfo (52ms)
-			ResolveRequiredComponents (28ms)
-	FinalizeReload (1340ms)
+		AnalyzeDomain (984ms)
+			TypeCache.Refresh (899ms)
+				TypeCache.ScanAssembly (804ms)
+			ScanForSourceGeneratedMonoScriptInfo (53ms)
+			ResolveRequiredComponents (31ms)
+	FinalizeReload (1715ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1001ms)
+		SetupLoadedEditorAssemblies (1196ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (32ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (59ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (111ms)
-			ProcessInitializeOnLoadAttributes (666ms)
-			ProcessInitializeOnLoadMethodAttributes (184ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (175ms)
+			ProcessInitializeOnLoadAttributes (748ms)
+			ProcessInitializeOnLoadMethodAttributes (200ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 67.68 ms, found 13 plugins.
-Preloading 1 native plugins for Editor in 1.60 ms.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 24.60 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.45 ms.
 Unloading 6692 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 132 unused Assets / (1.6 MB). Loaded Objects now: 7148.
 Memory consumption went from 265.1 MB to 263.5 MB.
-Total: 13.154700 ms (FindLiveObjects: 3.930300 ms CreateObjectMapping: 1.808900 ms MarkObjects: 6.726300 ms  DeleteObjects: 0.687800 ms)
+Total: 14.282300 ms (FindLiveObjects: 2.432900 ms CreateObjectMapping: 2.792900 ms MarkObjects: 8.314300 ms  DeleteObjects: 0.740200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -221,226 +221,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 746534.455909 seconds.
-  path: Assets/Scenes/MainScene/ReflectionProbe-0.exr
-  artifactKey: Guid(d2495a41736f265408b6852332aa6a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainScene/ReflectionProbe-0.exr using Guid(d2495a41736f265408b6852332aa6a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989b5522a528bd34d73b8b5b292b1eb4') in 0.799929 seconds
+  Time since last request: 942328.796277 seconds.
+  path: Assets/Objects/Map/Map2/Outside/New outside.fbx
+  artifactKey: Guid(252a61c50a2759b47b2322ae06366d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/New outside.fbx using Guid(252a61c50a2759b47b2322ae06366d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3149198037621e94448c68ba2c091ad5') in 0.582004 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 14
 ========================================================================
 Received Import Request.
-  Time since last request: 25.182980 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Arms/Arms_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(dac9609367d174b48aab723930207595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Arms/Arms_Bake1_PBR StoA_Glossiness.png using Guid(dac9609367d174b48aab723930207595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029f4c436bb3a8cab9abe3d2d3291b0d') in 0.074515 seconds
+  Time since last request: 306.425494 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 1 High/Block 1 High_Bake1_PBR StoA_Diffuse.png
+  artifactKey: Guid(29783b87ebb864744b26bdff2a88c12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 1 High/Block 1 High_Bake1_PBR StoA_Diffuse.png using Guid(29783b87ebb864744b26bdff2a88c12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b2023e951357bb9bf904b0c8f20a17') in 0.036082 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000032 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Arms/Arms_Bake1_PBR StoA_Normal.png
-  artifactKey: Guid(d0854cd96a778e5488e0283c26bbf3a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Arms/Arms_Bake1_PBR StoA_Normal.png using Guid(d0854cd96a778e5488e0283c26bbf3a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7eaf5f6d0134fba4376e96ad37895fd') in 0.037962 seconds
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 1 High/Block 1 High_Bake1_PBR StoA_Glossiness.png
+  artifactKey: Guid(a37e4303a11cc1b4891f308188fe1818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 1 High/Block 1 High_Bake1_PBR StoA_Glossiness.png using Guid(a37e4303a11cc1b4891f308188fe1818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f5c9c9180d46d61c40bf159aa284828') in 0.019340 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 40.828456 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Ladders Frame.Low/Ladders Frame.Low_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(a9b84afc7be2dd5408fc899dee54d205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Ladders Frame.Low/Ladders Frame.Low_Bake1_PBR StoA_Glossiness.png using Guid(a9b84afc7be2dd5408fc899dee54d205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413bd5d84e08803a6e015ab337cd6b00') in 0.027056 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Ladders Frame.Low/Ladders Frame.Low_Bake1_PBR StoA_Metalness.png
-  artifactKey: Guid(ed7edb5c69e8993469314f8e324e52a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Ladders Frame.Low/Ladders Frame.Low_Bake1_PBR StoA_Metalness.png using Guid(ed7edb5c69e8993469314f8e324e52a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7efd3a19424e8a41575721b1955e8b5d') in 0.045237 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 5.044866 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Frame poles.Low.006/Frame poles.Low.006_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(c867b744ea4f690469fedc2f507c34bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Frame poles.Low.006/Frame poles.Low.006_Bake1_PBR StoA_Glossiness.png using Guid(c867b744ea4f690469fedc2f507c34bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '330e2b53e642e292a8bf00600d298b06') in 0.021410 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Frame poles.Low.006/New Material.mat
-  artifactKey: Guid(610dbb58222727941bef6721398d920a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Frame poles.Low.006/New Material.mat using Guid(610dbb58222727941bef6721398d920a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c62f073a404e156b0bf3321a9f9854d') in 0.077493 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 8.167196 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Low Frame Middle.Low/Low Frame Middle.Low_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(21af756154e88df46b9af7dfa44f8909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Low Frame Middle.Low/Low Frame Middle.Low_Bake1_PBR StoA_Glossiness.png using Guid(21af756154e88df46b9af7dfa44f8909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '625afc7d39acf475ff80910b507b8c94') in 0.022265 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Low Frame Middle.Low/New Material.mat
-  artifactKey: Guid(0de92aef096f12c43a3b7ead6cfbd5f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Low Frame Middle.Low/New Material.mat using Guid(0de92aef096f12c43a3b7ead6cfbd5f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eee88ab223a67aaa5ca8766141e2742f') in 0.024428 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 4.659586 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Hydrauwlica.Low/Hydrauwlica.Low_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(094da1e76cec87f4bbea38daac19b9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Hydrauwlica.Low/Hydrauwlica.Low_Bake1_PBR StoA_Glossiness.png using Guid(094da1e76cec87f4bbea38daac19b9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd29aa0f076cabc12eeb7e6e4ba7a89') in 0.024070 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Hydrauwlica.Low/New Material.mat
-  artifactKey: Guid(f541253d6ee848740b050fd481928dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Hydrauwlica.Low/New Material.mat using Guid(f541253d6ee848740b050fd481928dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7e67da333daa263806617399aabd89') in 0.020105 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 8.616379 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Frame poles.Low/Frame poles.Low_Bake1_PBR StoA_Metalness.png
-  artifactKey: Guid(bda5ad7e2927d1a4b8f7d821cc9659a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Frame poles.Low/Frame poles.Low_Bake1_PBR StoA_Metalness.png using Guid(bda5ad7e2927d1a4b8f7d821cc9659a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e44e5460e8ee91a0face4d1b890cb1be') in 0.022985 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 48.335531 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Railing.Low.002/Railing.Low.002_Bake1_PBR StoA_Diffuse.png
-  artifactKey: Guid(0b69749fd724c1f4aac58b50b561743e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Railing.Low.002/Railing.Low.002_Bake1_PBR StoA_Diffuse.png using Guid(0b69749fd724c1f4aac58b50b561743e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031abf8b7d968b53e35e922a19178762') in 0.014224 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Railing.Low.002/Railing.Low.002_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(2ef90e0600985c84bbf5f8cd9aeb19d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Railing.Low.002/Railing.Low.002_Bake1_PBR StoA_Glossiness.png using Guid(2ef90e0600985c84bbf5f8cd9aeb19d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be287dff835526347132db7bd34b54c1') in 0.020159 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 15.298191 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Floor.Low.Right/Floor.Low.Right_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(745aacbfd457f514ca7c1288d7cd1c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Floor.Low.Right/Floor.Low.Right_Bake1_PBR StoA_Glossiness.png using Guid(745aacbfd457f514ca7c1288d7cd1c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6b1bac99b19b8822654e27588b6255f') in 0.020780 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Floor.Low.Right/New Material.mat
-  artifactKey: Guid(3f3c294a7bd7f054da330a5f88704c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Floor.Low.Right/New Material.mat using Guid(3f3c294a7bd7f054da330a5f88704c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cead4dbc2e4e3a9e31ec4a5024786640') in 0.023648 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 9.550903 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Cabine Low/Cabine Low_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(b02e50388cd7b0a489d2252d4b611300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Cabine Low/Cabine Low_Bake1_PBR StoA_Glossiness.png using Guid(b02e50388cd7b0a489d2252d4b611300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e5f02c8a7d7475fcf31869b4e7b9856') in 0.393154 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Cabine Low/New Material.mat
-  artifactKey: Guid(58a256685f71e8749a752a05d860f8d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Cabine Low/New Material.mat using Guid(58a256685f71e8749a752a05d860f8d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84df918d14cdda139113a68e9d8f9f3f') in 0.019280 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 5.035179 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Top frame.Low/Top frame.Low_Bake1_PBR StoA_Diffuse.png
-  artifactKey: Guid(4f3dffdc2a59d7d4996fefb1adb40ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Top frame.Low/Top frame.Low_Bake1_PBR StoA_Diffuse.png using Guid(4f3dffdc2a59d7d4996fefb1adb40ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf2a611181fbf046268e17b1f9a2ed1') in 0.021099 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Top frame.Low/Top frame.Low_Bake1_PBR StoA_Metalness.png
-  artifactKey: Guid(9a159c462aa438041abe59fa80982477) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Top frame.Low/Top frame.Low_Bake1_PBR StoA_Metalness.png using Guid(9a159c462aa438041abe59fa80982477) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e53709a853d60b6a9d72a2d23726cdd') in 0.388899 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 10.159428 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Middle Frame.Low/Middle Frame.Low_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(f6d512e7f6e7b4945bbe7acedfe6b26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Middle Frame.Low/Middle Frame.Low_Bake1_PBR StoA_Glossiness.png using Guid(f6d512e7f6e7b4945bbe7acedfe6b26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c1d399edc8d11bcaa872f2fb5fc1ba8') in 0.027363 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Middle Frame.Low/Middle Frame.Low_Bake1_PBR StoA_Metalness.png
-  artifactKey: Guid(99848b71e3fc63d429b4c2c8cc196af5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Middle Frame.Low/Middle Frame.Low_Bake1_PBR StoA_Metalness.png using Guid(99848b71e3fc63d429b4c2c8cc196af5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e867e0c498b15f32d05b5f8559bf53') in 0.017740 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 6.223642 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Filler Frame.Low/Filler Frame.Low_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(e93ac17d24668474b9e40c4ee5c70661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Filler Frame.Low/Filler Frame.Low_Bake1_PBR StoA_Glossiness.png using Guid(e93ac17d24668474b9e40c4ee5c70661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f2a159a4a45d6f0bf4f243bb558a137') in 0.022756 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Filler Frame.Low/Filler Frame.Low_Bake1_PBR StoA_Metalness.png
-  artifactKey: Guid(f49e4bc7f8e04544683c95cd0d4fb25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Filler Frame.Low/Filler Frame.Low_Bake1_PBR StoA_Metalness.png using Guid(f49e4bc7f8e04544683c95cd0d4fb25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a54ce33defa7f15438c623f19fb665bd') in 0.020027 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 10.839889 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Gas Tank.001/Gas Tank.001_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(7974a4ad407e9224d8d2a7e922a1cd88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Gas Tank.001/Gas Tank.001_Bake1_PBR StoA_Glossiness.png using Guid(7974a4ad407e9224d8d2a7e922a1cd88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5e726691fadf2ca11ce44a9d27c55b0') in 0.072503 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Gas Tank.001/New Material.mat
-  artifactKey: Guid(66113f21f8d55b247ba48dbe9feb3fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Gas Tank.001/New Material.mat using Guid(66113f21f8d55b247ba48dbe9feb3fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60f7e5f54409a14ea281656bf7038be4') in 0.023016 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 5.696323 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Motor/Motor_Bake1_PBR StoA_Glossiness.png
-  artifactKey: Guid(8214d97179eb4284b976a344a0fa5fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Motor/Motor_Bake1_PBR StoA_Glossiness.png using Guid(8214d97179eb4284b976a344a0fa5fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3707295327f03b41c5159ec697544f6') in 0.023489 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Objects/Straddle Carrier/Bakes/Textures/Motor/Motor_Bake1_PBR StoA_Metalness.png
-  artifactKey: Guid(74dbf20ee2856e64ca41329292cd25e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Objects/Straddle Carrier/Bakes/Textures/Motor/Motor_Bake1_PBR StoA_Metalness.png using Guid(74dbf20ee2856e64ca41329292cd25e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386853e305527faecac463310b68d3a3') in 0.019125 seconds
+  Time since last request: 0.000032 seconds.
+  path: Assets/Objects/Map/Map2/Outside/Textures/Block 1 High/Block 1 High_Bake1_PBR StoA_Metalness.png
+  artifactKey: Guid(52bc86ee2cabba0439d3a8395d90be00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Objects/Map/Map2/Outside/Textures/Block 1 High/Block 1 High_Bake1_PBR StoA_Metalness.png using Guid(52bc86ee2cabba0439d3a8395d90be00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9ccc4deb8716dbf91aa137327af2557') in 0.102727 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
