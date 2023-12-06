@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class ButtonFollowVisual : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class ButtonFollowVisual : MonoBehaviour
     public float resetSpeed = 5;
     private float followAngleThreshold = 80;
 
-    public InventoryManager inventory;
     private bool freeze = false;
 
     private Vector3 initialLocalPos;
@@ -21,6 +21,11 @@ public class ButtonFollowVisual : MonoBehaviour
 
     private XRBaseInteractable interactable;
     bool isFollowing = false;
+
+    public GameObject guidingArrow;
+
+    public TMP_Text startButtonText;
+    public GameObject handInventory;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,7 +92,10 @@ public class ButtonFollowVisual : MonoBehaviour
             }
             else if(this.gameObject.name == "Button.Start")
             {
-                inventory.hasPressedStart = true;
+                guidingArrow.SetActive(false);
+                startButtonText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.StartButtonPressed);
+                startButtonText.color = Color.green;
+                handInventory.SetActive(true);
             }
         }
         else
