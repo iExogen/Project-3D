@@ -84,7 +84,7 @@ public class SummonInventory : MonoBehaviour
             currentSlot.transform.position = wrenchStartPos;
             if (Vector3.Distance(wrench.transform.position, currentSlot.transform.position) > 2f)
             {
-                wrench.transform.position = wrenchStartPos + new Vector3(0, 2, 0);
+                wrench.transform.position = wrenchStartPos + new Vector3(0, 1, 0);
             }
         }
         //moving new slot
@@ -120,35 +120,35 @@ public class SummonInventory : MonoBehaviour
         {
             if(Vector3.Distance(hammer.transform.position,mainCamera.transform.position)>2f)
             {
-                hammer.transform.position = hammerSocket.transform.position + new Vector3(0,2,0);
+                hammer.transform.position = hammerSocket.transform.position + new Vector3(0,.3f,0);
             }
         }
         else if (currentSlot == powerSocket)
         {
             if (Vector3.Distance(powertool.transform.position, mainCamera.transform.position) > 2f)
             {
-                powertool.transform.position = powerSocket.transform.position + new Vector3(0, 2, 0);
+                powertool.transform.position = powerSocket.transform.position + new Vector3(0, .3f, 0);
             }
         }
         else if (currentSlot == cutterSocket)
         {
             if (Vector3.Distance(cutter.transform.position, mainCamera.transform.position) > 2f)
             {
-                cutter.transform.position = cutterSocket.transform.position + new Vector3(0, 2, 0);
+                cutter.transform.position = cutterSocket.transform.position + new Vector3(0, .3f, 0);
             }
         }
         else if (currentSlot == torchSocket)
         {
-            if (Vector3.Distance(hammer.transform.position, mainCamera.transform.position) > 2f)
+            if (Vector3.Distance(torch.transform.position, mainCamera.transform.position) > 2f)
             {
-                torch.transform.position = torchSocket.transform.position + new Vector3(0, 2, 0);
+                torch.transform.position = torchSocket.transform.position + new Vector3(0, .3f, 0);
             }
         }
         else if (currentSlot == wrenchSocket)
         {
-            if (Vector3.Distance(hammer.transform.position, mainCamera.transform.position) > 2f)
+            if (Vector3.Distance(wrench.transform.position, mainCamera.transform.position) > 2f)
             {
-                wrench.transform.position = wrenchSocket.transform.position + new Vector3(0, 2, 0);
+                wrench.transform.position = wrenchSocket.transform.position + new Vector3(0, .3f, 0);
             }
         }
     }

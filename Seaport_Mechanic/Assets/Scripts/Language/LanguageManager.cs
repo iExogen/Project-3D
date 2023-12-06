@@ -19,6 +19,7 @@ public class LanguageManager : Singleton<LanguageManager>
         ScoreDone,
         StartButton,
         EndButton,
+        StartButtonPressed,
         RestartButton,
         EndScreenSucces,
         EndScreenFailure,
@@ -92,6 +93,9 @@ public class LanguageManager : Singleton<LanguageManager>
 
         AddElement(Language.English, TextID.EndButton, "Finish");
         AddElement(Language.Nederlands, TextID.EndButton, "Eindig");
+
+        AddElement(Language.English, TextID.StartButtonPressed, "Finish your repairs");
+        AddElement(Language.Nederlands, TextID.StartButtonPressed, "Maak je reparaties af");
 
         AddElement(Language.English, TextID.RestartButton, "restart");
         AddElement(Language.Nederlands, TextID.RestartButton, "herstarten");
