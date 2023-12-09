@@ -66504,6 +66504,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1991497819}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1999060649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1464369805986020131, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Person Text (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.475262
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.967
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.330296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6862101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.17063335
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.17063335
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6862101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 27.928
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121076915272506616, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_text
+      value: You made it! On your left wrist you have a watch that you can PRESS
+        to see where the things are broken on the machine. At the other side of your
+        left wrist you have a few hexagons. This is your inventory, press a hexagon
+        to get a tool. Look for danger signs with a tool in, this will tell you what
+        tool to use. When you are ready to start press the green button. Good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121076915272506616, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 21.05
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b59a5bdc9243b02429c083c6f96c71ec, type: 3}
 --- !u!1 &2008302181
 GameObject:
   m_ObjectHideFlags: 0
@@ -66756,6 +66838,85 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.00015078482, z: 0.19999999}
   m_Center: {x: 0.012499988, y: 0.1624246, z: 0.099999994}
+--- !u!1001 &2028810132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1464369805986020131, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Person Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.899
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.892
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.37140435
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.60171324
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.60171324
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.37140435
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 116.631
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241011649922916761, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121076915272506616, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_text
+      value: You're here to repair the straddle carrier at workplace 4. Just look
+        at the numbers on the ground and you will find it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121076915272506616, guid: b59a5bdc9243b02429c083c6f96c71ec,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b59a5bdc9243b02429c083c6f96c71ec, type: 3}
 --- !u!1 &2030304991
 GameObject:
   m_ObjectHideFlags: 0
@@ -72694,7 +72855,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6269772053342816321, guid: 57293f063d4f3c64a82c56ef8e956013, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57293f063d4f3c64a82c56ef8e956013, type: 3}
@@ -73199,7 +73361,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8888324920946130166, guid: 403a64cb6fb1a5d4091ffd4c0f5dbdf8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403a64cb6fb1a5d4091ffd4c0f5dbdf8, type: 3}
@@ -73231,3 +73394,5 @@ SceneRoots:
   - {fileID: 1415657672}
   - {fileID: 1817541937637225501}
   - {fileID: 6647365074604863485}
+  - {fileID: 2028810132}
+  - {fileID: 1999060649}
