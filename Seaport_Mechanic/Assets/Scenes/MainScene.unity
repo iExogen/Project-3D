@@ -6620,6 +6620,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FallbackIfEyeTrackingUnavailable: 1
+--- !u!1 &516444247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100012, guid: d0c255d07fd68f14b94e55d388e7e6bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 716390879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &523888174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64751,6 +64757,7 @@ GameObject:
   - component: {fileID: 1841220233}
   - component: {fileID: 1841220234}
   - component: {fileID: 1841220235}
+  - component: {fileID: 1841220236}
   m_Layer: 11
   m_Name: HandButtonInteractor
   m_TagString: Untagged
@@ -64821,6 +64828,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1841220236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841220232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c122ad1794bae174e8b88bd3f9542dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finger: {fileID: 516444247}
 --- !u!1001 &1856503654
 PrefabInstance:
   m_ObjectHideFlags: 0
