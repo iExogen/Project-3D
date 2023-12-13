@@ -15,8 +15,8 @@ public class LookAtCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.LookAt(new Vector3(head.position.x, this.transform.position.y, head.position.z));
-        this.transform.forward *= -1;
+        transform.LookAt(new Vector3(head.position.x, transform.position.y, head.position.z));
+        transform.forward *= -1;
 
     }
 }

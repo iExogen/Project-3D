@@ -16,6 +16,7 @@ public class HammerRepair : MonoBehaviour
     public GameObject sparks;
     private bool needsRepair = true;
 
+    public AudioSource hammerSound;
     private void Start()
     {
         this.GetComponent<Animator>().Play("Armature | Full Twist_002");
@@ -25,6 +26,7 @@ public class HammerRepair : MonoBehaviour
         if (!needsRepair) return;
         if(other.tag == "Hammer")
         {
+            hammerSound.Play();
             if(hitsOnEngine <3)
             {
             twistLock.GetComponent<Animator>().Play("LilTwist");
