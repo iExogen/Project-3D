@@ -17,6 +17,8 @@ public class HammerRepair : MonoBehaviour
     private bool needsRepair = true;
 
     public AudioSource hammerSound;
+
+    public GameObject DangerSign;
     private void Start()
     {
         this.GetComponent<Animator>().Play("Armature | Full Twist_002");
@@ -39,6 +41,7 @@ public class HammerRepair : MonoBehaviour
                 sparks.SetActive(false);
                 needsRepair = false;
                 watchSphere.SetActive(false);
+                DangerSign.SetActive(false);
             }
             playsound = true;
 

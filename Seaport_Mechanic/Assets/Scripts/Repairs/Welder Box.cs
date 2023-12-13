@@ -18,6 +18,7 @@ public class WelderBox : MonoBehaviour
     private int repairedPieces = 0;
     public GameObject WelderSphere;
 
+
     public AudioSource hammerSound;
     // Start is called before the first frame update
     void Start()
