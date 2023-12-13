@@ -11,8 +11,7 @@ public class SoundEffectsRight : MonoBehaviour
 {
     public AudioSource screwDriver;
     public AudioSource plier;
-    public AudioSource hammer;
-    public HammerRepair hammerRepairScript;
+    public AudioSource welding;
 
     public InputActionProperty rightActivate;
 
@@ -34,9 +33,9 @@ public class SoundEffectsRight : MonoBehaviour
         {
             itemPickedUp = "Plier";
         }
-        else if (other.gameObject.CompareTag("Hammer"))
+        else if(other.gameObject.CompareTag("Welder"))
         {
-            itemPickedUp = "Hammer";
+            itemPickedUp = "Welder";
         }
     }
 
@@ -50,7 +49,7 @@ public class SoundEffectsRight : MonoBehaviour
         {
             itemPickedUp = "";
         }
-        else if (other.gameObject.CompareTag("Hammer"))
+        else if (other.gameObject.CompareTag("Welder"))
         {
             itemPickedUp = "";
         }
@@ -68,10 +67,10 @@ public class SoundEffectsRight : MonoBehaviour
         {
             plier.Play();
         }
-        else if (hammerRepairScript.playsound && itemPickedUp == "Hammer")
+        else if (rightActivate.action.ReadValue<float>() > 0.1f && itemPickedUp == "Welder" && isUnlocked)
         {
-            hammer.Play();
-            hammerRepairScript.playsound = false;
+            welding.Play();
+            isUnlocked = false;
         }
         else if (rightActivate.action.ReadValue<float>() < 0.1f && !isUnlocked)
         {

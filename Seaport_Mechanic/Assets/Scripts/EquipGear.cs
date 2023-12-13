@@ -22,7 +22,7 @@ public class EquipGear : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("player"))
+        if(other.CompareTag("Player"))
         {
             isHolding = false;
         }
