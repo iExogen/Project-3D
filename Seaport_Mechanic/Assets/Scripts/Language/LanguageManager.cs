@@ -15,6 +15,8 @@ public class LanguageManager : Singleton<LanguageManager>
         SettingsText,
         LanguageText,
         EquipmentText,
+        FirstTipText,
+        LockerRoomBoss,
         ScoreText,
         ScoreDone,
         StartButton,
@@ -81,6 +83,12 @@ public class LanguageManager : Singleton<LanguageManager>
 
         AddElement(Language.English, TextID.EquipmentText, "Pick up");
         AddElement(Language.Nederlands, TextID.EquipmentText, "oprapen");
+
+        AddElement(Language.English, TextID.FirstTipText, "Tip: \r\nYou can move with the left joystick and rotate with the right one.\r\nGrabbing items can be done with the grab buttons.");
+        AddElement(Language.Nederlands, TextID.FirstTipText, "Tip: \r\nJe kan bewegen met de linker joystick en draaien met de rechter\r\nObjecten grijpen doe je met de grijpknoppen.");
+
+        AddElement(Language.English, TextID.LockerRoomBoss, "I'm glad you could make it! Before we get started you need to change into your working gear. Safety is very important at DPWorld. When ready to work go GRAB the door to my right.");
+        AddElement(Language.Nederlands, TextID.LockerRoomBoss, "Goed dat je er bent! Vooraleer we beginnen moet je je werkkledij aandoen. Veiligheid is heel belangrijk bij DPWorld. Als je klaar bent GRIJP de deur rechts van mij");
 
         AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
         AddElement(Language.Nederlands, TextID.ScoreText, "Huidige reparaties: ");

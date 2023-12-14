@@ -32,7 +32,7 @@ public class EquipGear : MonoBehaviour
         if (wait5seconds <= Time.time-5f && isHolding)
         {
             GameManager.Instance.equipedItems++;
-            this.gameObject.SetActive(false);
+            this.transform.parent.gameObject.SetActive(false);
             switch (this.tag)
             {
                 case "Helmet":

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 170
+  controlID: 164
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 80
+  controlID: 115
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 169
+  controlID: 163
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 69
+  controlID: 55
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 70
+  controlID: 56
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,8 +291,8 @@ MonoBehaviour:
     y: 0
     width: 387
     height: 690
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -372,8 +372,8 @@ MonoBehaviour:
     y: 0
     width: 515
     height: 626
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -540,7 +540,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 218192
+  m_LastSelectedObjectID: 37468
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -587,7 +587,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Objects/Danger Icons
+    - Assets/Scripts/Language
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -595,16 +595,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Objects/Danger Icons
+  - Assets/Scripts/Language
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: F:\School\Git\Project-3D\Seaport_Mechanic
+  m_LastProjectPath: C:\Users\stefv\OneDrive\Documenten\GitHub\Project-3D\Seaport_Mechanic
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 116}
-    m_SelectedIDs: e28f0000
-    m_LastClickedID: 36834
-    m_ExpandedIDs: 00000000648e0000668e0000688e00006a8e00006c8e00006e8e0000708e0000728e0000748e0000768e0000788e00007a8e00007c8e000000ca9a3b
+    scrollPos: {x: 0, y: 624}
+    m_SelectedIDs: c2910000
+    m_LastClickedID: 37314
+    m_ExpandedIDs: 0000000076900000789000007a9000007c9000007e90000080900000829000008490000086900000889000008a9000008c9000008e9000009090000092900000949000004491000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -632,7 +632,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000648e0000668e0000688e00006a8e00006c8e00006e8e0000708e0000728e0000748e0000768e0000788e00007a8e00007c8e0000
+    m_ExpandedIDs: 0000000076900000789000007a9000007c9000007e90000080900000829000008490000086900000889000008a9000008c9000008e900000909000009290000094900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 8c800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 11}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 132
@@ -825,9 +825,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ac900000
-      m_LastClickedID: 0
-      m_ExpandedIDs: f8faffff
+      m_SelectedIDs: 5c920000
+      m_LastClickedID: 37468
+      m_ExpandedIDs: 2eddffff36ddffff38e0ffffbae0ffff4ef8ffff469200005c92000086920000c8920000de920000ca930000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1195,9 +1195,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 19.343441, y: 0.83352184, z: -11.869709}
+    m_Target: {x: -1.3426354, y: -0.2611537, z: -3.6891174}
     speed: 2
-    m_Value: {x: 19.343441, y: 0.83352184, z: -11.869709}
+    m_Value: {x: -1.3426354, y: -0.2611537, z: -3.6891174}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1243,13 +1243,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.15683596, y: 0.49418846, z: -0.091136985, w: 0.8502502}
+    m_Target: {x: 0.057696413, y: -0.9422619, z: 0.22910035, w: 0.23747899}
     speed: 2
-    m_Value: {x: 0.15696847, y: 0.49289995, z: -0.09089931, w: 0.85096884}
+    m_Value: {x: 0.057694413, y: -0.9422292, z: 0.2290924, w: 0.23747075}
   m_Size:
-    m_Target: 8.12057
+    m_Target: 2.3886168
     speed: 2
-    m_Value: 8.12057
+    m_Value: 2.3886168
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1320,7 +1320,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Objects/Danger Icons/Bake/Danger Icon LP Wheel
+    - Assets/Scripts/Language
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1328,16 +1328,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Objects/Danger Icons/Bake/Danger Icon LP Wheel
+  - Assets/Scripts/Language
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: F:\School\Git\Project-3D\Seaport_Mechanic
+  m_LastProjectPath: C:\Users\stefv\OneDrive\Documenten\GitHub\Project-3D\Seaport_Mechanic
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 144}
-    m_SelectedIDs: ac900000
-    m_LastClickedID: 37036
-    m_ExpandedIDs: 00000000648e0000668e0000688e00006a8e00006c8e00006e8e0000708e0000728e0000748e0000768e0000788e00007a8e00007c8e0000e28f00007a90000000ca9a3b
+    scrollPos: {x: 0, y: 624}
+    m_SelectedIDs: c2910000
+    m_LastClickedID: 37314
+    m_ExpandedIDs: 0000000076900000789000007a9000007c9000007e90000080900000829000008490000086900000889000008a9000008c9000008e9000009090000092900000949000004491000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1365,7 +1365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 142}
     m_SelectedIDs: 0a0c0100
     m_LastClickedID: 68618
-    m_ExpandedIDs: 00000000648e0000668e0000688e00006a8e00006c8e00006e8e0000708e0000728e0000748e0000768e0000788e00007a8e00007c8e0000
+    m_ExpandedIDs: 0000000076900000789000007a9000007c9000007e90000080900000829000008490000086900000889000008a9000008c9000008e900000909000009290000094900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 81
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
