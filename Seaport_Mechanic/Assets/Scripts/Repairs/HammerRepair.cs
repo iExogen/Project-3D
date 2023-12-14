@@ -8,7 +8,6 @@ public class HammerRepair : MonoBehaviour
 {
     private int hitsOnEngine = 0;
 
-    public GameObject twistLock;
 
     public bool playsound = false;
 
@@ -17,9 +16,10 @@ public class HammerRepair : MonoBehaviour
     private bool needsRepair = true;
 
     public AudioSource hammerSound;
+    private bool lilTwist = true;
+    public GameObject DangerSign;
     private void Start()
     {
-        this.GetComponent<Animator>().Play("Armature | Full Twist_002");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -29,19 +29,30 @@ public class HammerRepair : MonoBehaviour
             hammerSound.Play();
             if(hitsOnEngine <3)
             {
-            twistLock.GetComponent<Animator>().Play("LilTwist");
+            GetComponent<Animator>().Play("LilTwist");
             hitsOnEngine++;
             }  
             if(hitsOnEngine == 3)
             {
-                twistLock.GetComponent<Animator>().Play("Armature | Full Twist_002");
+                GetComponent<Animator>().Play("BigTwist");
                 GameManager.Instance.repairsDone++;
                 sparks.SetActive(false);
                 needsRepair = false;
                 watchSphere.SetActive(false);
+                DangerSign.SetActive(false);
+                lilTwist = false;
             }
             playsound = true;
-
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Hammer"))
+        {
+            if(lilTwist)
+            {
+                GetComponent<Animator>().Play("Idle");
+            }
         }
     }
 }

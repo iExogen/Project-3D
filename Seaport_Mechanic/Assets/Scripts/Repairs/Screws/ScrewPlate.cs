@@ -10,6 +10,7 @@ public class ScrewPlate : MonoBehaviour
     public GameObject screwPlateBrokenMovable;
     public GameObject sparks;
 
+    public GameObject dangerSignDrill;
     public GameObject WatchSphere;
 
     private bool removedPlate = false;
@@ -51,6 +52,7 @@ public class ScrewPlate : MonoBehaviour
             GameManager.Instance.repairsDone++;
             WatchSphere.SetActive(false);
             sparks.SetActive(false);
+            dangerSignDrill.SetActive(false);
         }
     }
 }
