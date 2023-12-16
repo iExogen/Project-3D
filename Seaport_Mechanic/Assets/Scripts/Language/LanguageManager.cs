@@ -17,6 +17,8 @@ public class LanguageManager : Singleton<LanguageManager>
         EquipmentText,
         FirstTipText,
         LockerRoomBoss,
+        GarageBoss1,
+        GarageBoss2,
         ScoreText,
         ScoreDone,
         StartButton,
@@ -84,11 +86,17 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.EquipmentText, "Pick up");
         AddElement(Language.Nederlands, TextID.EquipmentText, "oprapen");
 
-        AddElement(Language.English, TextID.FirstTipText, "Tip: \r\nYou can move with the left joystick and rotate with the right one.\r\nGrabbing items can be done with the grab buttons.");
-        AddElement(Language.Nederlands, TextID.FirstTipText, "Tip: \r\nJe kan bewegen met de linker joystick en draaien met de rechter\r\nObjecten grijpen doe je met de grijpknoppen.");
+        AddElement(Language.English, TextID.FirstTipText, "Tip: \r\nYou can move with the left joystick and rotate with the right one, or you can use the B button to teleport.\r\nGrabbing items can be done with the grab buttons.");
+        AddElement(Language.Nederlands, TextID.FirstTipText, "Tip: \r\nJe kan bewegen met de linker joystick en draaien met de rechter, of gebruik de B knop om te teleporteren.\r\nObjecten grijpen doe je met de grijpknoppen.");
 
-        AddElement(Language.English, TextID.LockerRoomBoss, "I'm glad you could make it! Before we get started you need to change into your working gear. Safety is very important at DPWorld. When ready to work go GRAB the door to my right.");
-        AddElement(Language.Nederlands, TextID.LockerRoomBoss, "Goed dat je er bent! Vooraleer we beginnen moet je je werkkledij aandoen. Veiligheid is heel belangrijk bij DPWorld. Als je klaar bent GRIJP de deur rechts van mij");
+        AddElement(Language.English, TextID.LockerRoomBoss, "I'm glad you could make it! Before we get started you need to change into your working gear. Safety is very important at DPWorld. When ready to work go TELEPORT on the door to my right.");
+        AddElement(Language.Nederlands, TextID.LockerRoomBoss, "Goed dat je er bent! Voor we beginnen moet je je werkkledij aandoen. Veiligheid is heel belangrijk bij DPWorld. Als je klaar bent TELEPORTEER op de deur rechts van mij");
+
+        AddElement(Language.English, TextID.GarageBoss1, "Step into the garage, Technician! Your mission: restore functionality to the straddle carrier at workstation 4. Meet with me at that location, where I'll provide detailed instructions for a flawless repair.");
+        AddElement(Language.Nederlands, TextID.GarageBoss1, "Welkom in de garage, monteur! Uw opdracht is om de straddle carrier op werkstation 4 weer in werking te stellen. We spreken daar af, waar ik u gedetailleerde instructies zal geven voor een vlekkeloze reparatie.");
+
+        AddElement(Language.English, TextID.GarageBoss2, "Let's get started! To identify the malfunctioning components, simply tap your wristwatch and look for the glowing red spheres. You can also seek out flickering sparks and warning symbols, which also indicate the appropriate tools required for each repair. Your inventory can be accessed by glancing at the back of your left wrist. Moreover, you'll notice a workstation beside me, stacked with hefty components necessary for the repairs. These must be manually transported to the designated repair sites. When you're fully prepared, initiate your work by pressing the glistening green button.");
+        AddElement(Language.Nederlands, TextID.GarageBoss2, "Laten we beginnen! Om de defecte componenten te identificeren, tikt u gewoon op uw horloge en zoekt u de rode bollen. U kunt ook uitkijken naar flikkerende vonken en waarschuwingssymbolen, die ook de juiste gereedschappen aangeven die nodig zijn voor elke reparatie. Uw inventaris kunt u zien door op de achterkant van uw linkerpols te kijken. Bovendien ziet u naast mij een werkstation met zware componenten die nodig zijn voor de reparaties. Deze moeten handmatig worden vervoerd naar de aangewezen reparatielocaties. Zodra u volledig bent voorbereid, start u uw werk door op de groene knop te drukken.");
 
         AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
         AddElement(Language.Nederlands, TextID.ScoreText, "Huidige reparaties: ");
