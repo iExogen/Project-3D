@@ -108,9 +108,9 @@ public class SummonInventory : MonoBehaviour
                 default:
                 break;
         }
-        currentSlot.transform.position = this.gameObject.transform.position;
-        currentSlot.transform.rotation = this.gameObject.transform.rotation;
-        currentSlot.transform.SetParent(this.gameObject.transform);
+        currentSlot.transform.position = gameObject.transform.position;
+        currentSlot.transform.rotation = gameObject.transform.rotation;
+        currentSlot.transform.SetParent(gameObject.transform);
     }
 
     private void Update()
