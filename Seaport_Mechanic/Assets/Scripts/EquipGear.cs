@@ -29,7 +29,7 @@ public class EquipGear : MonoBehaviour
     }
     private void Update()
     {
-        if (wait5seconds <= Time.time-5f && isHolding)
+        if (wait5seconds <= Time.time-1f && isHolding)
         {
             GameManager.Instance.equipedItems++;
             this.transform.parent.gameObject.SetActive(false);
