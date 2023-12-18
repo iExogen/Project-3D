@@ -17,6 +17,9 @@ public class SoundEffectsRight : MonoBehaviour
 
     private string itemPickedUp = "";
     private bool isUnlocked = true;
+    public GameObject weldingFlames;
+
+    public GameObject weldingMask;
     // Start is called before the first frame update
 
     void Start()
@@ -28,14 +31,22 @@ public class SoundEffectsRight : MonoBehaviour
         if (other.gameObject.tag == "ScrewDriver")
         {
             itemPickedUp = "ScrewDriver";
+            weldingMask.SetActive(false);
         }
         else if (other.gameObject.CompareTag("Plier"))
         {
             itemPickedUp = "Plier";
+            weldingMask.SetActive(false);
         }
-        else if(other.gameObject.CompareTag("Welder"))
+        else if (other.gameObject.CompareTag("Welder"))
         {
             itemPickedUp = "Welder";
+            weldingMask.SetActive(true);
+
+        }
+        else
+        {
+            weldingMask.SetActive(false);
         }
     }
 
@@ -70,12 +81,15 @@ public class SoundEffectsRight : MonoBehaviour
         else if (rightActivate.action.ReadValue<float>() > 0.1f && itemPickedUp == "Welder" && isUnlocked)
         {
             welding.Play();
+            weldingFlames.SetActive(true);
             isUnlocked = false;
         }
         else if (rightActivate.action.ReadValue<float>() < 0.1f && !isUnlocked)
         {
             isUnlocked = true;
             screwDriver.Stop();
+            welding.Stop();
+            weldingFlames.SetActive(false);
         }
     }
 }

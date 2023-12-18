@@ -53,6 +53,7 @@ public class TextFiller : MonoBehaviour
 
         toUpperText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToUpperText);
         toLowerText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToLowerText);
+
     }
 
     // Update is called once per frame

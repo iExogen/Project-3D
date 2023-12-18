@@ -27,7 +27,7 @@ public class SummonInventory : MonoBehaviour
     private Vector3 wrenchStartPos;
 
     public GameObject mainCamera;
-
+    public GameObject spawnSpot;
     private GameObject currentSlot = null;
     // Start is called before the first frame update
     void Start()
@@ -108,9 +108,9 @@ public class SummonInventory : MonoBehaviour
                 default:
                 break;
         }
-        currentSlot.transform.position = gameObject.transform.position;
-        currentSlot.transform.rotation = gameObject.transform.rotation;
-        currentSlot.transform.SetParent(gameObject.transform);
+        currentSlot.transform.position = spawnSpot.transform.position;
+        currentSlot.transform.rotation = spawnSpot.transform.rotation;
+        currentSlot.transform.SetParent(spawnSpot.transform);
     }
 
     private void Update()
