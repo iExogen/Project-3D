@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class TextFiller : MonoBehaviour
 {
+    /*
     public TMP_Text PlayerName;
     public TMP_Text PlayerScore;
     public TMP_Text NPC1Score;
@@ -21,22 +22,23 @@ public class TextFiller : MonoBehaviour
     public Slider NPC3Slider;
     public Slider NPC5Slider;
     public Slider NPC6Slider;
-
+    */
     public TMP_Text toUpperText;
     public TMP_Text toLowerText;
-
+    /*
     private string PlayerNameString;
     private float npcScore=0;
     private float timeBetweenNPCScore = 10;
     private float timer;
-
+    */
     public TMP_Text startButton;
     public TMP_Text endButton;
-
-    private bool botsWorking;
+    
+    //private bool botsWorking;
 
     void Start()
     {
+        /*
         timer = Time.time;
         npcScore = 0;
         PlayerNameString = LanguageManager.Instance.GetText(LanguageManager.TextID.PlayerNameText);
@@ -47,7 +49,7 @@ public class TextFiller : MonoBehaviour
         NPC3Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         NPC5Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         NPC6Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
-
+        */
         startButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.StartButton);
         endButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EndButton);
 
@@ -59,7 +61,7 @@ public class TextFiller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
             PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + GameManager.Instance.repairsDone;
         if (!botsWorking) return;
         if (Time.time > timer+timeBetweenNPCScore * (npcScore + 1))
@@ -91,5 +93,6 @@ public class TextFiller : MonoBehaviour
             {
                 PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreDone);
             }
-        }
+        */
+    }
 }

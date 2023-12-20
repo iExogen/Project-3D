@@ -20,34 +20,32 @@ public class languageStarter : MonoBehaviour
     public AudioSource chalk;
 
     public GameObject UkaricanIndicator;
-    private Transform ukaricanStartPos;
+    private Vector3 ukaricanStartPos;
     public GameObject BelgerlandIndicator;
-    private Transform BelgerlandStartPos;
+    private Vector3 BelgerlandStartPos;
     // Start is called before the first frame update
     void Start()
     {
-        ukaricanStartPos = UkaricanIndicator.transform;
-        BelgerlandStartPos = BelgerlandIndicator.transform;
+        ukaricanStartPos = UkaricanIndicator.transform.position;
+        BelgerlandStartPos = BelgerlandIndicator.transform.position;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Crayon"))
+        if(collision.gameObject.CompareTag("Player"))
         {
             if (collision.GetContact(0).thisCollider == UkArican)
             {
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
-                BelgerlandIndicator.transform.position = BelgerlandStartPos.position;
-                UkaricanIndicator.transform.position += new Vector3(0, 0, 0.0013f);
-                BelgerlandIndicator.transform.position -= new Vector3(0, 0, 0.0013f);
+                BelgerlandIndicator.transform.position = BelgerlandStartPos;
+                UkaricanIndicator.transform.position = ukaricanStartPos +new Vector3(0, 0, 0.0013f);
                 chalk.Play();
             }
             else if(collision.GetContact(0).thisCollider == Belgerland)
             {
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
-                UkaricanIndicator.transform.position = ukaricanStartPos.position;
-                BelgerlandIndicator.transform.position += new Vector3(0, 0, 0.0013f);
-                UkaricanIndicator.transform.position -= new Vector3(0, 0, 0.0013f);
+                UkaricanIndicator.transform.position = ukaricanStartPos;
+                BelgerlandIndicator.transform.position = BelgerlandStartPos + new Vector3(0, 0, 0.0013f);
                 chalk.Play();
             }
         }

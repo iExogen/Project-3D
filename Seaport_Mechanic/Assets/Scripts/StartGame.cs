@@ -12,15 +12,14 @@ public class StartGame : MonoBehaviour
     public InputActionProperty leftSelect;
     public InputActionProperty rightSelect;
     int itemsEquiped;
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Door"))
         {
             onDoor = true;
         }
     }
-
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.CompareTag("Door"))
         {
