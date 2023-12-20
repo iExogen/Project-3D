@@ -22,8 +22,6 @@ public class ButtonFollowVisual : MonoBehaviour
     private XRBaseInteractable interactable;
     bool isFollowing = false;
 
-    public GameObject guidingArrow;
-
     public TMP_Text startButtonText;
     public GameObject handInventory;
     // Start is called before the first frame update
@@ -92,7 +90,6 @@ public class ButtonFollowVisual : MonoBehaviour
             }
             else if(this.gameObject.name == "Button.Start")
             {
-                guidingArrow.SetActive(false);
                 startButtonText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.StartButtonPressed);
                 startButtonText.color = Color.green;
                 handInventory.SetActive(true);

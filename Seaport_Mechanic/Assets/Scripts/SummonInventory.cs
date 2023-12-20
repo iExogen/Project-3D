@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit.UI.BodyUI;
 
 public class SummonInventory : MonoBehaviour
@@ -28,7 +30,12 @@ public class SummonInventory : MonoBehaviour
 
     public GameObject mainCamera;
     public GameObject spawnSpot;
-    private GameObject currentSlot = null;
+    [SerializeField]private GameObject currentSlot = null;
+
+    public GameObject torchFlame;
+    public GameObject mask;
+    public InputActionProperty leftActivate;
+    public InputActionProperty rightActivate;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,18 +51,64 @@ public class SummonInventory : MonoBehaviour
     {
         //check if object is a handbutton
         if (collision.gameObject.layer != 11) return;
+        SwitchSlot();
+        //moving new slot
+        MoveItems(collision);
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Welder"))
+        {
+            if(currentSlot == torchSocket)
+            {
+                mask.SetActive(true);
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Welder"))
+        {
+            if(currentSlot != torchSocket)
+            mask.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        //make sure items return to slot when too far away
+        ReturnItems();
+        if (currentSlot == torchSocket && rightActivate.action.ReadValue<float>() > 0.1f)
+        {
+            torchFlame.SetActive(true);
+        }
+        else if(currentSlot == torchSocket && leftActivate.action.ReadValue<float>()>0.1f)
+        {
+            torchFlame.SetActive(true);
+        }
+        else
+        {
+            torchFlame.SetActive(false);
+        }
+    }
+
+
+    private void SwitchSlot()
+    {
         currentSlot.transform.SetParent(parentSocket.transform);
         currentSlot.transform.rotation = Quaternion.Euler(0, 0, 0);
         //moving previous slot
-        if(currentSlot == hammerSocket)
+        if (currentSlot == hammerSocket)
         {
             currentSlot.transform.position = hammerStartpos;
-            if(Vector3.Distance(hammer.transform.position,currentSlot.transform.position) >2f)
+            if (Vector3.Distance(hammer.transform.position, currentSlot.transform.position) > 2f)
             {
                 hammer.transform.position = hammerStartpos + new Vector3(0, 2, 0);
             }
         }
-        else if(currentSlot == powerSocket)
+        else if (currentSlot == powerSocket)
         {
             currentSlot.transform.position = powerStartpos;
             if (Vector3.Distance(powertool.transform.position, currentSlot.transform.position) > 2f)
@@ -63,7 +116,7 @@ public class SummonInventory : MonoBehaviour
                 powertool.transform.position = powerStartpos + new Vector3(0, 2, 0);
             }
         }
-        else if(currentSlot == cutterSocket)
+        else if (currentSlot == cutterSocket)
         {
             currentSlot.transform.position = cutterStartPos;
             if (Vector3.Distance(cutterSocket.transform.position, currentSlot.transform.position) > 2f)
@@ -87,7 +140,10 @@ public class SummonInventory : MonoBehaviour
                 wrench.transform.position = wrenchStartPos + new Vector3(0, 1, 0);
             }
         }
-        //moving new slot
+    }
+
+    private void MoveItems(Collision collision)
+    {
         switch (collision.GetContact(0).thisCollider.name)
         {
             case "HammerButton":
@@ -105,7 +161,7 @@ public class SummonInventory : MonoBehaviour
             case "WrenchButton":
                 currentSlot = wrenchSocket;
                 break;
-                default:
+            default:
                 break;
         }
         currentSlot.transform.position = spawnSpot.transform.position;
@@ -113,14 +169,14 @@ public class SummonInventory : MonoBehaviour
         currentSlot.transform.SetParent(spawnSpot.transform);
     }
 
-    private void Update()
+    private void ReturnItems()
     {
         //make sure items return to slot when too far away
-        if(currentSlot == hammerSocket)
+        if (currentSlot == hammerSocket)
         {
-            if(Vector3.Distance(hammer.transform.position,mainCamera.transform.position)>2f)
+            if (Vector3.Distance(hammer.transform.position, mainCamera.transform.position) > 2f)
             {
-                hammer.transform.position = hammerSocket.transform.position + new Vector3(0,.3f,0);
+                hammer.transform.position = hammerSocket.transform.position + new Vector3(0, .3f, 0);
             }
         }
         else if (currentSlot == powerSocket)
@@ -152,5 +208,4 @@ public class SummonInventory : MonoBehaviour
             }
         }
     }
-
 }
