@@ -17,7 +17,6 @@ public class GameManager : Singleton<GameManager>
     public int finishPlace = 1;
     public int equipedItems=0;
 
-    public bool Welding = false;
     private void Start()
     {
     }

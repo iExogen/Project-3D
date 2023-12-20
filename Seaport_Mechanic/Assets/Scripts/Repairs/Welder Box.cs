@@ -15,9 +15,10 @@ public class WelderBox : MonoBehaviour
 
     public GameObject hammerWarningSign;
     public GameObject welderWarningSign;
-    private int repairedPieces = 0;
-    public GameObject WelderSphere;
+    [SerializeField]private int repairedPieces = 0;
+    public GameObject welderSphere;
 
+    public GameObject sparks;
 
     public AudioSource hammerSound;
     // Start is called before the first frame update
@@ -60,7 +61,7 @@ public class WelderBox : MonoBehaviour
     void Update()
     {
         if (!hasHammered) return;
-        if(GameManager.Instance.Welding && toolCollision)
+        if(toolCollision && currentCollider.GetComponent<MeshRenderer>().enabled == false)
         {
             repairedPieces++;
             currentCollider.GetComponent<MeshRenderer>().enabled = true;
@@ -68,7 +69,8 @@ public class WelderBox : MonoBehaviour
             {
                 GameManager.Instance.repairsDone++;
                 welderWarningSign.SetActive(false);
-                WelderSphere.SetActive(false);
+                welderSphere.SetActive(false);
+                sparks.SetActive(false);
             }
         }
     }

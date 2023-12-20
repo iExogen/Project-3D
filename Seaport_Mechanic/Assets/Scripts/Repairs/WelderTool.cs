@@ -40,17 +40,14 @@ public class WelderTool : MonoBehaviour
         if(hasPickedUp && leftSelect.action.ReadValue<float>() >0.1f)
         {
             flames.SetActive(true);
-            GameManager.Instance.Welding = true;
         }
         else if(hasPickedUp && rightSelect.action.ReadValue<float>() >0.1f)
         {
             flames.SetActive(true);
-            GameManager.Instance.Welding = true;
         }
         else
         {
             flames.SetActive(false);
-            GameManager.Instance.Welding = false;
         }
     }
 
