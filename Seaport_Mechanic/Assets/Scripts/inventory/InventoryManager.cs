@@ -7,49 +7,28 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class InventoryManager : MonoBehaviour
 {
-    public InputActionProperty yButton;
-    XRBaseInteractable yButtonPress;
-
-    public Transform head;
-    public float spawnDistance = 0.5f;
-
-    private bool buttonyValue;
-    public GameObject inventory;
-    public GameObject playerCamera;
-    public bool hasPressedStart;
-    bool isInvisible;
-    Vector3 startingPosition;
+    public GameObject itemSlot;
+    private Vector3 spawnPoint;
     // Start is called before the first frame update
     void Start()
     {
-        startingPosition = inventory.transform.localPosition;
-        hasPressedStart = false;
+        spawnPoint = itemSlot.transform.position;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            itemSlot.transform.position = transform.position;
+        }
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        if(!hasPressedStart) return;
-        if(Vector3.Distance(inventory.transform.position,head.position)>=2)
+        if(other.CompareTag("Player"))
         {
-            inventory.transform.localPosition = new Vector3(0, -10, 0);
-            isInvisible = true;
-        }
-        if (yButton.action.triggered)
-        {
-            if(isInvisible)
-            {
-                inventory.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
-                isInvisible = false;
-            }
-            else
-            {
-                inventory.transform.localPosition = new Vector3(0, -10, 0);
-                isInvisible = true;
-            }
-            inventory.transform.LookAt(new Vector3(head.position.x, inventory.transform.position.y, head.position.z));
-            inventory.transform.forward *= -1;
+            itemSlot.transform.position = spawnPoint;
         }
     }
 }
