@@ -36,6 +36,7 @@ public class ScrewMachine : MonoBehaviour
     {
         if (other.gameObject.tag == "ScrewDriver")
         {
+            visualTarget.localPosition = new Vector3(visualTarget.position.x, visualTarget.position.y, 0);
             isFollowing = false;
         } 
 
@@ -67,6 +68,7 @@ public class ScrewMachine : MonoBehaviour
         if (visualTarget.localPosition.z <= -0.1 && needsFixing)
         {
             needsFixing = false;
+            this.GetComponent<Rigidbody>().isKinematic = true;
             GameManager.Instance.screwsRemoved++;
         }
     }

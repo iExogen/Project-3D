@@ -16,6 +16,8 @@ public class LanguageManager : Singleton<LanguageManager>
         LanguageText,
         EquipmentText,
         FirstTipText,
+        SecondTipText,
+        ThirdTipText,
         LockerRoomBoss,
         GarageBoss1,
         GarageBoss2,
@@ -88,11 +90,17 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.EquipmentText, "Pick up");
         AddElement(Language.Nederlands, TextID.EquipmentText, "oprapen");
 
-        AddElement(Language.English, TextID.FirstTipText, "Tip: \r\nYou can move with the left joystick and rotate with the right one, or you can use the B and Y buttons to teleport.\r\nGrabbing items can be done with the grab buttons.");
-        AddElement(Language.Nederlands, TextID.FirstTipText, "Tip: \r\nJe kan bewegen met de linker joystick en draaien met de rechter, of gebruik de B en X knoppen om te teleporteren.\r\nObjecten grijpen doe je met de grijpknoppen.");
+        AddElement(Language.English, TextID.FirstTipText, "Tip: You can Grab items with the grab buttons.");
+        AddElement(Language.Nederlands, TextID.FirstTipText, "Tip: Objecten grijpen doe je met de grijpknoppen.");
 
-        AddElement(Language.English, TextID.LockerRoomBoss, "I'm glad you could make it! Before we get started you need to change into your working gear. Safety is very important at DPWorld. When ready to work go GRAB on the door to my right.");
-        AddElement(Language.Nederlands, TextID.LockerRoomBoss, "Goed dat je er bent! Voor we beginnen moet je je werkkledij aandoen. Veiligheid is heel belangrijk bij DPWorld. Als je klaar bent GRIJP op de deur rechts van mij");
+        AddElement(Language.English, TextID.SecondTipText, "Tip: you can use the B and Y buttons to teleport.");
+        AddElement(Language.Nederlands, TextID.SecondTipText, "Tip: gebruik de B en X knoppen om te teleporteren.");
+
+        AddElement(Language.English, TextID.ThirdTipText, "Tip: open the menu with the MENU button");
+        AddElement(Language.Nederlands, TextID.ThirdTipText, "Tip: open het menu met de MENU knop");
+
+        AddElement(Language.English, TextID.LockerRoomBoss, "I'm glad you could make it! Before we get started you need to change into your working gear. Safety is very important at DPWorld. When ready to work go TELEPORT on the door to my right.");
+        AddElement(Language.Nederlands, TextID.LockerRoomBoss, "Goed dat je er bent! Voor we beginnen moet je je werkkledij aandoen. Veiligheid is heel belangrijk bij DPWorld. Als je klaar bent TELEPORTEER op de deur rechts van mij");
 
         AddElement(Language.English, TextID.GarageBoss1, "Step into the garage, Technician! Your mission: restore functionality to the straddle carrier at workstation 4. Meet with me at that location, where I'll provide detailed instructions for a flawless repair.");
         AddElement(Language.Nederlands, TextID.GarageBoss1, "Welkom in de garage, monteur! Uw opdracht is om de straddle carrier op werkstation 4 weer in werking te stellen. We spreken daar af, waar ik u gedetailleerde instructies zal geven voor een vlekkeloze reparatie.");
