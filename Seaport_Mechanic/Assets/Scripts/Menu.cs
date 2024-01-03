@@ -16,18 +16,30 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        interactable.hoverEntered.AddListener(Follow);
+        menu.transform.position = head.position + new Vector3(head.forward.x, 0.05f, head.forward.z).normalized;
+        isInvisible = false;
     }
 
-    public void Follow(BaseInteractionEventArgs hover)
+    public void onCollisionEnter(Collision other)
     {
-        if (hover.interactorObject is XRPokeInteractor)
+        if (other.gameObject.CompareTag("Player"))
         {
+            if (other.GetContact(0).thisCollider.gameObject.name == "Restart Button")
+            {
                 GameManager.Instance.repairsDone = 0;
                 GameManager.Instance.screwsFixed = 0;
                 GameManager.Instance.screwsRemoved = 0;
                 SceneManager.LoadScene(0);
-            LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+                LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+            }
+            else if(other.GetContact(0).thisCollider.gameObject.name == "EnglishButton")
+            {
+                LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+            }
+            else if(other.GetContact(0).thisCollider.gameObject.name == "DutchButton")
+            {
+                LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
+            }
         }
     }
     // Update is called once per frame

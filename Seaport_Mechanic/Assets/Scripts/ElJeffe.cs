@@ -17,6 +17,7 @@ public class ElJeffe : MonoBehaviour
     public TMP_Text tutorialText;
     public GameObject hasGazed;
     public GameObject sparks;
+    public GameObject stopBlock;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class ElJeffe : MonoBehaviour
             tutorialText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.GarageBoss4);
             transform.position = position3.transform.position;
             transform.rotation = position3.transform.rotation;
+            stopBlock.SetActive(false);
         }
         if(!sparks.activeSelf)
         {

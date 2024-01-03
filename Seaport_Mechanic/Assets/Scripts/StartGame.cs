@@ -29,11 +29,7 @@ public class StartGame : MonoBehaviour
     private void Update()
     {
         //if (itemsEquiped < 3) return;
-        if(onDoor && leftSelect.action.ReadValue<float>() > 0.1f)
-        {
-            SceneManager.LoadScene(1);
-        }
-        else if (onDoor && rightSelect.action.ReadValue<float>() > 0.1f)
+        if(onDoor && GameManager.Instance.equipedItems==3)
         {
             SceneManager.LoadScene(1);
         }
