@@ -12,7 +12,7 @@ public class LanguageManager : Singleton<LanguageManager>
     public enum TextID
     {
         PlayerNameText,
-        SettingsText,
+        RestartText,
         LanguageText,
         EquipmentText,
         FirstTipText,
@@ -81,8 +81,8 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.PlayerNameText, "Player1");
         AddElement(Language.Nederlands, TextID.PlayerNameText, "Speler1");
 
-        AddElement(Language.English, TextID.SettingsText, "Settings");
-        AddElement(Language.Nederlands, TextID.SettingsText, "instellingen");
+        AddElement(Language.English, TextID.RestartText, "Restart game");
+        AddElement(Language.Nederlands, TextID.RestartText, "spel herstarten");
 
         AddElement(Language.English, TextID.LanguageText, "Language:");
         AddElement(Language.Nederlands, TextID.LanguageText, "taal:");

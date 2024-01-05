@@ -16,16 +16,18 @@ public class ScrewMachine : MonoBehaviour
     private Vector3 offset;
     private Transform attachTransform;
 
+    private Vector3 startPosition;
     private bool isFollowing = false;
     private bool needsFixing = true;
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = visualTarget.position;
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "ScrewDriver")
+        if(other.gameObject.CompareTag("ScrewDriver"))
         {
                 attachTransform = other.transform;
                 offset = visualTarget.position - attachTransform.position;
@@ -34,9 +36,9 @@ public class ScrewMachine : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "ScrewDriver")
+        if (other.gameObject.CompareTag("ScrewDriver") && needsFixing)
         {
-            visualTarget.localPosition = new Vector3(visualTarget.position.x, visualTarget.position.y, 0);
+            visualTarget.position = startPosition;
             isFollowing = false;
         } 
 
@@ -68,7 +70,7 @@ public class ScrewMachine : MonoBehaviour
         if (visualTarget.localPosition.z <= -0.1 && needsFixing)
         {
             needsFixing = false;
-            this.GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Rigidbody>().isKinematic = false;
             GameManager.Instance.screwsRemoved++;
         }
     }

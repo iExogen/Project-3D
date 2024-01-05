@@ -29,6 +29,7 @@ public class Menu : MonoBehaviour
                 GameManager.Instance.repairsDone = 0;
                 GameManager.Instance.screwsFixed = 0;
                 GameManager.Instance.screwsRemoved = 0;
+                GameManager.Instance.equipedItems = false;
                 SceneManager.LoadScene(0);
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
             }
@@ -39,6 +40,11 @@ public class Menu : MonoBehaviour
             else if(other.GetContact(0).thisCollider.gameObject.name == "DutchButton")
             {
                 LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
+            }
+            else if (other.GetContact(0).thisCollider.gameObject.name == "ResumeButton")
+            {
+                menu.transform.position = new Vector3(0, -20, 0);
+                isInvisible = true;
             }
         }
     }

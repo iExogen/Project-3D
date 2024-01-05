@@ -7,12 +7,6 @@ using UnityEngine.UI;
 
 public class IntroSceneLanguage : MonoBehaviour
 {
-
-    public TMP_Text settingsText;
-    public TMP_Text languageText;
-    public TMP_Text firstObjectText;
-    public TMP_Text secondObject;
-    public TMP_Text thirdObject;
     public TMP_Text secondTip;
     public TMP_Text BossTip;
 
@@ -27,12 +21,7 @@ public class IntroSceneLanguage : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        settingsText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.SettingsText);
-        languageText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.LanguageText);
-        firstObjectText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EquipmentText);
-        secondObject.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EquipmentText);
-        thirdObject.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EquipmentText);
+    {       
         BossTip.text = LanguageManager.Instance.GetText(LanguageManager.TextID.LockerRoomBoss);
        
         secondTip.text = LanguageManager.Instance.GetText(LanguageManager.TextID.SecondTipText);
