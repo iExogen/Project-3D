@@ -9,6 +9,7 @@ public class IntroSceneLanguage : MonoBehaviour
 {
     public TMP_Text secondTip;
     public TMP_Text BossTip;
+    public TMP_Text resumeButton;
 
     public InputActionProperty leftTrigger;
     public InputActionProperty rightTrigger;
@@ -27,6 +28,7 @@ public class IntroSceneLanguage : MonoBehaviour
         secondTip.text = LanguageManager.Instance.GetText(LanguageManager.TextID.SecondTipText);
         if (leftTeleport.action.IsPressed() || rightTeleport.action.IsPressed())
         {
+            resumeButton.gameObject.SetActive(false);
             secondTip.gameObject.transform.parent.gameObject.SetActive(false);
         }
 

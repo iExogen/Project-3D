@@ -20,7 +20,6 @@ public class LanguageManager : Singleton<LanguageManager>
         ThirdTipText,
         LockerRoomBoss,
         GarageBoss1,
-        GarageBoss2,
         GarageBoss3,
         GarageBoss4,
         ScoreText,
@@ -105,14 +104,11 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.GarageBoss1, "Step into the garage, Technician! Your mission: restore functionality to the straddle carrier at workstation 4. Meet with me at that location, where I'll provide detailed instructions for a flawless repair.");
         AddElement(Language.Nederlands, TextID.GarageBoss1, "Welkom in de garage, monteur! Uw opdracht is om de straddle carrier op werkstation 4 weer in werking te stellen. We spreken daar af, waar ik u gedetailleerde instructies zal geven voor een vlekkeloze reparatie.");
 
-        AddElement(Language.English, TextID.GarageBoss2, "Let's get started! To initiate your work press the green button.");
-        AddElement(Language.Nederlands, TextID.GarageBoss2, "Laten we beginnen! Om je werk te starten moet je op de groene knop drukken.");
+        AddElement(Language.English, TextID.GarageBoss3, "You need to repair this straddle carrier. Look at the twist lock next to me to start your first repair.");
+        AddElement(Language.Nederlands, TextID.GarageBoss3, "Je moet je straddle carrier repareren. Kijk naar de twist lock naast mij om je eerste reparatie te starten.");
 
-        AddElement(Language.English, TextID.GarageBoss3, "Now you can see your inventory on your left hand. Press a tool to summon it. Tap your watch to see the Straddle carrier model. The red orbs indicate where the problems are. Why don't you got to the twistlock in front of you.");
-        AddElement(Language.Nederlands, TextID.GarageBoss3, "Nu kan je je inventaris zien op je linkerhand. Druk op een tool om deze te ontvangen. Klik op je horloge om je Straddle carrier model te zien. De rode bollen duiden aan waar de problemen zijn. Ga eens naar de twistlock reparatie vlak voor je.");
-
-        AddElement(Language.English, TextID.GarageBoss4, "The danger symbol indicates what tool you need to use. Remember that some repairs need you to replace a piece. These pieces will be found back at your work station. Now get started already!");
-        AddElement(Language.Nederlands, TextID.GarageBoss4, "De gevaarsymbolen duiden aan welke tool je nodig hebt. Denk eraan dat sommige reparatie extra onderdelen nodig hebben. Deze onderdelen vind je op je werkbank. En begin er nu eens aan!");
+        AddElement(Language.English, TextID.GarageBoss4, "The danger symbol indicates what tool you need to use. It's also your inventory. Hold your hand on it to summon the tool.");
+        AddElement(Language.Nederlands, TextID.GarageBoss4, "De gevaarsymbolen duiden aan welke tool je nodig hebt. Het is ook je inventaris. Houd je hand erop om een tool te krijgen.");
 
         AddElement(Language.English, TextID.ScoreText, "Current repairs: ");
         AddElement(Language.Nederlands, TextID.ScoreText, "Huidige reparaties: ");
