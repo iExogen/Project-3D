@@ -7,8 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Menu : MonoBehaviour
 {
-
-    public GameObject menu;
     public Transform head;
     public InputActionProperty menuButton;
     public XRSimpleInteractable interactable;
@@ -16,7 +14,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menu.transform.position = head.position + new Vector3(head.forward.x, 0.05f, head.forward.z).normalized;
+        transform.position = head.position + new Vector3(head.forward.x, 0.05f, head.forward.z).normalized;
         isInvisible = false;
     }
 
@@ -43,7 +41,7 @@ public class Menu : MonoBehaviour
             }
             else if (other.GetContact(0).thisCollider.gameObject.name == "ResumeButton")
             {
-                menu.transform.position = new Vector3(0, -20, 0);
+                transform.position = new Vector3(0, -20, 0);
                 isInvisible = true;
             }
         }
@@ -55,16 +53,16 @@ public class Menu : MonoBehaviour
         {
          if(isInvisible)
             {
-                menu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
+                transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized;
                 isInvisible = false;
             }
             else
             {
-                menu.transform.position = new Vector3(0, -20, 0);
+                transform.position = new Vector3(0, -20, 0);
                 isInvisible = true;
             }
         }
-        this.transform.LookAt(new Vector3(head.position.x, this.transform.position.y, head.position.z));
-        this.transform.forward *= -1;
+        transform.LookAt(new Vector3(head.position.x, transform.position.y, head.position.z));
+        transform.forward *= -1;
     }
 }
