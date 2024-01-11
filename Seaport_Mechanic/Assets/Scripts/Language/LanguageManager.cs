@@ -19,6 +19,7 @@ public class LanguageManager : Singleton<LanguageManager>
         SecondTipText,
         ThirdTipText,
         LockerRoomBoss,
+        GripTip,
         GarageBoss1,
         GarageBoss3,
         GarageBoss4,
@@ -31,7 +32,9 @@ public class LanguageManager : Singleton<LanguageManager>
         EndScreenSucces,
         EndScreenFailure,
         ToUpperText,
-        ToLowerText
+        ToLowerText,
+        Succes,
+        Fail,
     }
     public Language chosenLanguage = Language.English;
     private Dictionary<Language, Dictionary<TextID, string>> allTexts = new Dictionary<Language, Dictionary<TextID, string>>();
@@ -101,6 +104,9 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.LockerRoomBoss, "I'm glad you could make it! Before we get started you need to change into your working gear. Safety is very important at DPWorld. When ready to work go TELEPORT on the door to my right.");
         AddElement(Language.Nederlands, TextID.LockerRoomBoss, "Goed dat je er bent! Voor we beginnen moet je je werkkledij aandoen. Veiligheid is heel belangrijk bij DPWorld. Als je klaar bent TELEPORTEER op de deur rechts van mij");
 
+        AddElement(Language.English, TextID.GripTip, "Press GRIP button to grab an object");
+        AddElement(Language.Nederlands, TextID.GripTip, "Druk de GRIJP knop om een item vast te pakken");
+
         AddElement(Language.English, TextID.GarageBoss1, "Step into the garage, Technician! Your mission: restore functionality to the straddle carrier at workstation 4. Meet with me at that location, where I'll provide detailed instructions for a flawless repair.");
         AddElement(Language.Nederlands, TextID.GarageBoss1, "Welkom in de garage, monteur! Uw opdracht is om de straddle carrier op werkstation 4 weer in werking te stellen. We spreken daar af, waar ik u gedetailleerde instructies zal geven voor een vlekkeloze reparatie.");
 
@@ -139,6 +145,12 @@ public class LanguageManager : Singleton<LanguageManager>
 
         AddElement(Language.English, TextID.ToLowerText, "To ground floor");
         AddElement(Language.Nederlands, TextID.ToLowerText, "Naar beneden");
+
+        AddElement(Language.English, TextID.Succes, "You succeeded in your repair!");
+        AddElement(Language.Nederlands, TextID.Succes, "Je bent in je reparaties geslaagd!");
+
+        AddElement(Language.English, TextID.Succes, "You failed to finish your repairs in time!");
+        AddElement(Language.Nederlands, TextID.Succes, "Je hebt je reparaties niet op tijd afgekregen!");
     }
 
 }
