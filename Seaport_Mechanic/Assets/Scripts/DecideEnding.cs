@@ -18,6 +18,11 @@ public class DecideEnding : MonoBehaviour
     public CanvasGroup blackScreen;
 
     public char endingChoice;
+
+    private bool badEndingChecked = false;
+
+    public AudioSource driving;
+    public AudioSource crashing;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,16 +40,20 @@ public class DecideEnding : MonoBehaviour
             successOrFailText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.Fail);
             successOrFailText.color = Color.red;
         }
+        driving.Play();
         timer = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(endingChoice == 'B'&& Time.time >=timer+2.5f)
+        if(endingChoice == 'B'&& Time.time >=timer+2.5f && !badEndingChecked)
         {
-            movingStraddle.gameObject.SetActive(false);
-            brokenStraddle.gameObject.SetActive(true);
+            movingStraddle.SetActive(false);
+            brokenStraddle.SetActive(true);
+            driving.Stop();
+            crashing.Play();
+            badEndingChecked = true;
         }
         if(Time.time >= timer+4f)
         {
