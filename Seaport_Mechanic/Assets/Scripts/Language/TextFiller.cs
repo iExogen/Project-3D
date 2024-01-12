@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -31,9 +32,12 @@ public class TextFiller : MonoBehaviour
     private float timeBetweenNPCScore = 10;
     private float timer;
     */
-    public TMP_Text startButton;
-    public TMP_Text endButton;
-    
+    public TMP_Text gripTip;
+
+    public InputActionProperty leftTrigger;
+    public InputActionProperty rightTigger;
+
+
     //private bool botsWorking;
 
     void Start()
@@ -50,8 +54,7 @@ public class TextFiller : MonoBehaviour
         NPC5Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         NPC6Score.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + npcScore;
         */
-        startButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.StartButton);
-        endButton.text = LanguageManager.Instance.GetText(LanguageManager.TextID.EndButton);
+        gripTip.text = LanguageManager.Instance.GetText(LanguageManager.TextID.GripTip);
 
         toUpperText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToUpperText);
         toLowerText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToLowerText);
@@ -61,6 +64,10 @@ public class TextFiller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(leftTrigger.action.ReadValue<float>() >0.1f || rightTigger.action.ReadValue<float>()>0.1f)
+        {
+            gripTip.gameObject.transform.parent.gameObject.SetActive(false);
+        }
         /*
             PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + GameManager.Instance.repairsDone;
         if (!botsWorking) return;
