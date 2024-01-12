@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class EndMainScene : MonoBehaviour
 {
-    public float timer;
+    private float timer;
+
+    public AudioSource countdown;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,10 @@ public class EndMainScene : MonoBehaviour
         if(Time.time >= timer+600f || GameManager.Instance.repairsDone==5)
         {
             SceneManager.LoadScene(2);
+        }
+        if (Time.time >= timer + 580f)
+        {
+            
         }
     }
 }

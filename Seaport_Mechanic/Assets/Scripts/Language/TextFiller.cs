@@ -38,6 +38,12 @@ public class TextFiller : MonoBehaviour
     public InputActionProperty rightTigger;
 
 
+    public float timeLeft;
+    public bool timerDone = false;
+
+    public TMP_Text timerText;
+
+
     //private bool botsWorking;
 
     void Start()
@@ -58,7 +64,6 @@ public class TextFiller : MonoBehaviour
 
         toUpperText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToUpperText);
         toLowerText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ToLowerText);
-
     }
 
     // Update is called once per frame
@@ -68,6 +73,19 @@ public class TextFiller : MonoBehaviour
         {
             gripTip.gameObject.transform.parent.gameObject.SetActive(false);
         }
+        if(timerDone == false)
+        {
+            if(timeLeft>0f)
+            {
+                timeLeft -= Time.deltaTime;
+                UpdateTimer(timeLeft);
+            }
+            else
+            {
+                timerDone = true;
+            }
+        }
+        
         /*
             PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreText) + GameManager.Instance.repairsDone;
         if (!botsWorking) return;
@@ -101,5 +119,15 @@ public class TextFiller : MonoBehaviour
                 PlayerScore.text = LanguageManager.Instance.GetText(LanguageManager.TextID.ScoreDone);
             }
         */
+    }
+
+    void UpdateTimer (float currentTime)
+    {
+        currentTime += 1f;
+
+        float minutes = Mathf.FloorToInt(currentTime / 60);
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+
+        timerText.text = string.Format(minutes +" : "+ seconds);
     }
 }

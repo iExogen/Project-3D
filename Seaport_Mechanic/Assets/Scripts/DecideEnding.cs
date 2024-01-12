@@ -69,6 +69,6 @@ public class DecideEnding : MonoBehaviour
             LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
         }
 
-        blackScreen.alpha -= 0.01f;
+        blackScreen.alpha -= 0.001f;
     }
 }
