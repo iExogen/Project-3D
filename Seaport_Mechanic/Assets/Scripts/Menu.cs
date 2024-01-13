@@ -1,3 +1,4 @@
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] bool test=false;
     public Transform head;
     public InputActionProperty menuButton;
-    public XRSimpleInteractable interactable;
     private bool isInvisible;
+
+    public GameObject restartGame;
+    public GameObject englishSelect;
+    public GameObject dutchSelect;
+    public GameObject resumeGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +26,8 @@ public class Menu : MonoBehaviour
 
     public void onCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
+        /*
+        test = true;
             if (other.GetContact(0).thisCollider.gameObject.name == "Restart Button")
             {
                 GameManager.Instance.repairsDone = 0;
@@ -44,11 +50,37 @@ public class Menu : MonoBehaviour
                 transform.position = new Vector3(0, -20, 0);
                 isInvisible = true;
             }
-        }
+        */
     }
     // Update is called once per frame
     void Update()
     {
+       if(restartGame.activeSelf == false)
+        {
+            restartGame.SetActive(true);
+            GameManager.Instance.repairsDone = 0;
+            GameManager.Instance.screwsFixed = 0;
+            GameManager.Instance.screwsRemoved = 0;
+            GameManager.Instance.equipedItems = false;
+            SceneManager.LoadScene(0);
+            LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+        }
+       else if(englishSelect.activeSelf == false)
+        {
+            LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+            englishSelect.SetActive(true);
+        }
+       else if(dutchSelect.activeSelf == false)
+        {
+            LanguageManager.Instance.chosenLanguage = LanguageManager.Language.Nederlands;
+            dutchSelect.SetActive(true);
+        }
+       else if(resumeGame.activeSelf == false)
+        {
+            transform.position = new Vector3(0, -20, 0);
+            isInvisible = true;
+            resumeGame.SetActive(true);
+        }
         if(menuButton.action.triggered)
         {
          if(isInvisible)
@@ -64,5 +96,7 @@ public class Menu : MonoBehaviour
         }
         transform.LookAt(new Vector3(head.position.x, transform.position.y, head.position.z));
         transform.forward *= -1;
+
+
     }
 }

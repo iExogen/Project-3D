@@ -11,6 +11,7 @@ public class EngineRepairs : MonoBehaviour
     public GameObject sparks;
 
     public GameObject dangerSignCutter;
+    public GameObject dangerSignStretcher;
     public GameObject watchSphere;
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class EngineRepairs : MonoBehaviour
             sparks.SetActive(false);
             watchSphere.SetActive(false);  
             dangerSignCutter.SetActive(false);
+            dangerSignStretcher.SetActive(false);
         }
     }
 }

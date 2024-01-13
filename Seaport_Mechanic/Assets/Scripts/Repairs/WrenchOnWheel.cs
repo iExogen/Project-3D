@@ -25,7 +25,7 @@ public class WrenchOnWheel : MonoBehaviour
             gameObject.SetActive(false);
             wrenchObject.SetActive(true);
             _Wrench.screwsfixed++;
-            screw.gameObject.SetActive(false);
+            screw.SetActive(false);
         }
     }
 }

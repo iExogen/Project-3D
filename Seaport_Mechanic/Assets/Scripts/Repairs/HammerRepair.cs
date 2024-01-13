@@ -18,6 +18,8 @@ public class HammerRepair : MonoBehaviour
     public AudioSource hammerSound;
     private bool lilTwist = true;
     public GameObject DangerSign;
+
+    public GameObject startBox;
     private void Start()
     {
     }
@@ -41,6 +43,7 @@ public class HammerRepair : MonoBehaviour
                 watchSphere.SetActive(false);
                 DangerSign.SetActive(false);
                 lilTwist = false;
+                startBox.SetActive(false);
             }
             playsound = true;
         }

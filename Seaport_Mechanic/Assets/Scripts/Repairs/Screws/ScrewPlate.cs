@@ -11,6 +11,7 @@ public class ScrewPlate : MonoBehaviour
     public GameObject sparks;
 
     public GameObject dangerSignDrill;
+    public GameObject dangerSignPlate;
     public GameObject WatchSphere;
 
     private bool removedPlate = false;
@@ -31,10 +32,11 @@ public class ScrewPlate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "ScrewPlatesFixed" && removedPlate)
+        if(other.CompareTag("ScrewPlatesFixed") && removedPlate)
         {
             screwPlateFixedMovable.gameObject.SetActive(false);
             screwPlateFixedPos.SetActive(true);
+            dangerSignPlate.SetActive(false);
         }
     }
 

@@ -12,7 +12,6 @@ public class ElJeffe : MonoBehaviour
     private bool firstPosition = false;
     private bool secondPosition = false;
     private bool fourthPosition = false;
-    public ButtonFollowVisual pressEnter;
     public TMP_Text tutorialText;
     public GameObject hasGazed;
     public GameObject sparks;

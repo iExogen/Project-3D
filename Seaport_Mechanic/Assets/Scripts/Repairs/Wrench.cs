@@ -12,6 +12,11 @@ public class Wrench : MonoBehaviour
     private bool keepOldWheel = true;
     public GameObject repairedWheel;
     public GameObject sparks;
+
+    public GameObject wrenchTriangle;
+    public GameObject wheelTriangle;
+
+    public GameObject wheelOrb;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +46,8 @@ public class Wrench : MonoBehaviour
             repairedWheel.SetActive(true);
             sparks.SetActive(false);
             GameManager.Instance.repairsDone++;
+            wheelOrb.SetActive(false);
+            wheelTriangle.SetActive(false);
         }
     }
 
@@ -59,6 +66,7 @@ public class Wrench : MonoBehaviour
         if(screwsfixed==4)
         {
             wheelFall.Play("WheelFall");
+            wrenchTriangle.SetActive(false);
         }
     }
 }
