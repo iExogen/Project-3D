@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class TextFiller : MonoBehaviour
 {
@@ -43,6 +40,11 @@ public class TextFiller : MonoBehaviour
 
     public TMP_Text timerText;
 
+    public InputActionProperty aButton;
+
+    public AudioSource countdown;
+
+    private bool playCountDown = false;
 
     //private bool botsWorking;
 
@@ -83,7 +85,20 @@ public class TextFiller : MonoBehaviour
             else
             {
                 timerDone = true;
+                SceneManager.LoadScene(2);
             }
+
+            if (timeLeft <=20f && !playCountDown)
+            {
+                playCountDown = true;
+                countdown.Play();
+            }
+
+        }
+
+        if(aButton.action.IsPressed())
+        {
+            timeLeft =20f;
         }
         
         /*

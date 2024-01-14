@@ -17209,7 +17209,6 @@ GameObject:
   - component: {fileID: 526620804}
   - component: {fileID: 526620803}
   - component: {fileID: 526620802}
-  - component: {fileID: 526620806}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -17301,19 +17300,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.58, y: 0.7154}
   m_SizeDelta: {x: 488, y: 271}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &526620806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526620801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3e5f32046ae39438a0d4b34ea6113b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdown: {fileID: 1259925555}
 --- !u!1001 &527434968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75944,12 +75930,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259925553}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1581692075}
+  m_Father: {fileID: 1976305044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1259925555
 AudioSource:
@@ -81040,6 +81026,20 @@ MonoBehaviour:
   timeLeft: 600
   timerDone: 0
   timerText: {fileID: 1875926778}
+  aButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: A Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a863f454-d8a3-4a49-8658-67e57e67e4e9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3051289676893124948, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  countdown: {fileID: 1259925555}
 --- !u!1 &1270111377
 GameObject:
   m_ObjectHideFlags: 0
@@ -105385,7 +105385,6 @@ Transform:
   m_Children:
   - {fileID: 2125738435}
   - {fileID: 1935882853}
-  - {fileID: 1259925554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585448923 stripped
@@ -126853,6 +126852,7 @@ Transform:
   - {fileID: 388451170}
   - {fileID: 526620805}
   - {fileID: 1110260083}
+  - {fileID: 1259925554}
   m_Father: {fileID: 2293589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1976305045

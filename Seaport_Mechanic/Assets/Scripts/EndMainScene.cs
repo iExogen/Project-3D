@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class EndMainScene : MonoBehaviour
@@ -8,6 +9,8 @@ public class EndMainScene : MonoBehaviour
     private float timer;
 
     public AudioSource countdown;
+
+    public InputActionProperty aButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,12 @@ public class EndMainScene : MonoBehaviour
         }
         if (Time.time >= timer + 580f)
         {
-            
+            countdown.Play();
+        }
+
+        if (aButton.action.IsPressed())
+        {
+            timer = Time.time-580f;
         }
     }
 }

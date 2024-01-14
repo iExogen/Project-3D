@@ -1626,6 +1626,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Button1",
+                    "type": "Button",
+                    "id": "07d79b5c-020b-49ae-a81b-e7acf48c18e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1824,6 +1833,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ButtonA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e89d3d7c-d146-42b2-86e3-30451a7433c0",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Button1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
