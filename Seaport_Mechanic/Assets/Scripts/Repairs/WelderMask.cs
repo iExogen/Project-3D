@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WelderMask : MonoBehaviour
 {
     public GameObject mask;
+    public GameObject torch;
     
     // Start is called before the first frame update
     void Start()
@@ -12,26 +14,18 @@ public class WelderMask : MonoBehaviour
         
     }
 
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Welder"))
-        {
-            mask.SetActive(true);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Welder"))
-        {
-            mask.SetActive(false);
-        }
-    }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Vector3.Distance(gameObject.transform.position, torch.transform.position) > 5f)
+        {
+            mask.SetActive(true);
+        }
+        else
+        {
+            mask.SetActive(false);
+        }
     }
 }

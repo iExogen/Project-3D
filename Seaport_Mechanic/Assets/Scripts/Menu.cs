@@ -1,6 +1,7 @@
 using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -17,6 +18,9 @@ public class Menu : MonoBehaviour
     public GameObject englishSelect;
     public GameObject dutchSelect;
     public GameObject resumeGame;
+
+    public TMP_Text restartText;
+    public TMP_Text languageText;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +58,8 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        restartText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.RestartText);
+        languageText.text = LanguageManager.Instance.GetText(LanguageManager.TextID.LanguageText);
        if(restartGame.activeSelf == false)
         {
             restartGame.SetActive(true);
@@ -95,7 +101,6 @@ public class Menu : MonoBehaviour
         }
         transform.LookAt(new Vector3(head.position.x, transform.position.y, head.position.z));
         transform.forward *= -1;
-
 
     }
 }

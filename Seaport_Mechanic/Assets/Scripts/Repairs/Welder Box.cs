@@ -20,7 +20,6 @@ public class WelderBox : MonoBehaviour
     public GameObject welderSphere;
 
     public GameObject sparks;
-    public GameObject mask;
 
     public AudioSource hammerSound;
 
@@ -77,7 +76,6 @@ public class WelderBox : MonoBehaviour
                 welderWarningSign.SetActive(false);
                 welderSphere.SetActive(false);
                 sparks.SetActive(false);
-                mask.SetActive(false);
             }
         }
         else if (toolCollision && currentCollider.GetComponent<MeshRenderer>().enabled == false && rightActivate.action.ReadValue<float>() > 0.1f)
@@ -90,7 +88,6 @@ public class WelderBox : MonoBehaviour
                 welderWarningSign.SetActive(false);
                 welderSphere.SetActive(false);
                 sparks.SetActive(false);
-                mask.SetActive(false);
             }
         }
     }
