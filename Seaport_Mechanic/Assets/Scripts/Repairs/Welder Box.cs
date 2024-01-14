@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WelderBox : MonoBehaviour
 {
@@ -19,8 +20,13 @@ public class WelderBox : MonoBehaviour
     public GameObject welderSphere;
 
     public GameObject sparks;
+    public GameObject mask;
 
     public AudioSource hammerSound;
+
+    public InputActionProperty leftActivate;
+    public InputActionProperty rightActivate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +67,7 @@ public class WelderBox : MonoBehaviour
     void Update()
     {
         if (!hasHammered) return;
-        if(toolCollision && currentCollider.GetComponent<MeshRenderer>().enabled == false)
+        if(toolCollision && currentCollider.GetComponent<MeshRenderer>().enabled == false && leftActivate.action.ReadValue<float>() >0.1f) 
         {
             repairedPieces++;
             currentCollider.GetComponent<MeshRenderer>().enabled = true;
@@ -71,6 +77,20 @@ public class WelderBox : MonoBehaviour
                 welderWarningSign.SetActive(false);
                 welderSphere.SetActive(false);
                 sparks.SetActive(false);
+                mask.SetActive(false);
+            }
+        }
+        else if (toolCollision && currentCollider.GetComponent<MeshRenderer>().enabled == false && rightActivate.action.ReadValue<float>() > 0.1f)
+        {
+            repairedPieces++;
+            currentCollider.GetComponent<MeshRenderer>().enabled = true;
+            if (repairedPieces == 24)
+            {
+                GameManager.Instance.repairsDone++;
+                welderWarningSign.SetActive(false);
+                welderSphere.SetActive(false);
+                sparks.SetActive(false);
+                mask.SetActive(false);
             }
         }
     }

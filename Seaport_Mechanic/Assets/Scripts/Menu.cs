@@ -20,7 +20,6 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = head.position + new Vector3(head.forward.x, 0.05f, head.forward.z).normalized;
         isInvisible = false;
     }
 

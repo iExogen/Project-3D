@@ -86738,7 +86738,34 @@ MonoBehaviour:
   repairedPieces: 0
   welderSphere: {fileID: 141164546}
   sparks: {fileID: 1178968165}
+  mask: {fileID: 1867452105}
   hammerSound: {fileID: 845313900}
+  leftActivate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Activate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 17701bea-d769-4c48-94d6-4bc4e7b5956b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  rightActivate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Activate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 855e93fb-39e9-4f45-9b76-bf771c26ff5b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!54 &1320283129
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -115430,6 +115457,7 @@ GameObject:
   - component: {fileID: 1623998765}
   - component: {fileID: 1623998764}
   - component: {fileID: 1623998763}
+  - component: {fileID: 1623998766}
   m_Layer: 0
   m_Name: TorchSocket
   m_TagString: Untagged
@@ -115534,6 +115562,19 @@ Transform:
   - {fileID: 1010091748}
   m_Father: {fileID: 464087201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623998766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623998762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cdf2f736683b1489962bd34e4072e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask: {fileID: 1867452105}
 --- !u!1 &1630885652
 GameObject:
   m_ObjectHideFlags: 0
@@ -116727,7 +116768,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 43aff7a95eee1f34a8e3ffe7631615d5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 957255203563605964, guid: 43aff7a95eee1f34a8e3ffe7631615d5,
         type: 3}
