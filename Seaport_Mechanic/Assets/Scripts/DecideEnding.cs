@@ -65,8 +65,8 @@ public class DecideEnding : MonoBehaviour
             GameManager.Instance.screwsFixed = 0;
             GameManager.Instance.screwsRemoved = 0;
             GameManager.Instance.equipedItems = false;
-            SceneManager.LoadScene(0);
             LanguageManager.Instance.chosenLanguage = LanguageManager.Language.English;
+            SceneManager.LoadScene(0);
         }
 
         blackScreen.alpha -= 0.001f;

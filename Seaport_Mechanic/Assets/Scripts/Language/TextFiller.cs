@@ -93,6 +93,10 @@ public class TextFiller : MonoBehaviour
                 playCountDown = true;
                 countdown.Play();
             }
+            if(GameManager.Instance.repairsDone==5)
+            {
+                SceneManager.LoadScene(2);
+            }
 
         }
 

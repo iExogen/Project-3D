@@ -146,8 +146,8 @@ public class LanguageManager : Singleton<LanguageManager>
         AddElement(Language.English, TextID.Succes, "You succeeded in your repair!");
         AddElement(Language.Nederlands, TextID.Succes, "Je bent in je reparaties geslaagd!");
 
-        AddElement(Language.English, TextID.Succes, "You failed to finish your repairs in time!");
-        AddElement(Language.Nederlands, TextID.Succes, "Je hebt je reparaties niet op tijd afgekregen!");
+        AddElement(Language.English, TextID.Fail, "You failed to finish your repairs in time!");
+        AddElement(Language.Nederlands, TextID.Fail, "Je hebt je reparaties niet op tijd afgekregen!");
     }
 
 }
